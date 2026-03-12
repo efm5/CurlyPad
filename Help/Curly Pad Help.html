@@ -1,0 +1,1305 @@
+<html>
+<head>
+   <title>
+      Curly&nbsp;Pad Help
+   </title>
+   <meta name="description" content="Reference manual for Curly&nbsp;Pad Editor">
+   <meta name="keywords" content="Curly&nbsp;Pad Editor">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body style="margin:50px;padding:0">
+   <h1>Curly&nbsp;Pad Editor&rsquo;s</h1>
+   <h2>Reference Manual</h2>
+   <br>
+   <div class="introdiv">
+      <p>This replacement for Windows&rsquo;s built&ndash;in Notepad is a fast and efficient editor. It features some tools for manipulating code for Visual Studio.</p>
+   </div>
+   <div class="picturediv">
+      <img src="CurlyPad.png" alt="Curly&nbsp;Pad&rsquo;s main window">
+   </div>
+   <div class="imageLabel">
+      <b><big>Curly&nbsp;Pad</big>&rsquo;s main window without the commenting nor wheeling interfaces:</b>
+   </div>
+   <div class="picturediv">
+      <img src="noCoding.png" alt="Curly&nbsp;Pad&rsquo;s main window without the commenting nor wheeling interfaces">
+   </div>
+   <h3>Table of Contents</h3>
+   <table class="center">
+      <tr>
+         <td colspan="3"><a href="#menu"><big><b>The&nbsp;Menu</b></big></a></td>
+      </tr>
+      <tr>
+         <td><a href="#file">The&nbsp;File&nbsp;Menu</a></td>
+         <td><a href="#edit">The&nbsp;Edit&nbsp;Menu</a></td>
+         <td><a href="#view">The&nbsp;View&nbsp;Menu</a></td>
+      </tr>
+      <tr>
+         <td colspan="2"><a href="#options">The&nbsp;Options&nbsp;Menu</a></td>
+      </tr>
+      <tr>
+         <td class="alignleft"><a href="#externalFontPicker">The&nbsp;External&nbsp;Font&nbsp;Picker</a></td>
+         <td class="alignleft"><a href="#externalColorPicker">The&nbsp;External&nbsp;Color&nbsp;Picker</a></td>
+      </tr>
+      <tr>
+         <td><a href="#comment">The&nbsp;Coding&nbsp;Menu</a></td>
+         <td><a href="#help">The&nbsp;Help&nbsp;Menu&nbsp;Item</a></td>
+      </tr>
+      <tr>
+         <td colspan="2"><a href="#toolbar"><big><b>The&nbsp;Toolbar</b></big></a></td>
+      </tr>
+      <tr>
+         <td><a href="#editing">The&nbsp;Editing&nbsp;Tools</a></td>
+         <td><a href="#commenting">The&nbsp;Coding&nbsp;Tools</a></td>
+         <td><a href="#wheeling">The&nbsp;Wheeling&nbsp;Tools</a></td>
+      </tr>
+      <tr>
+         <td><a href="#statusBar"><big><b>The&nbsp;Status&nbsp;Bar</b></big></a></td>
+      </tr>
+      <tr>
+         <td colspan="4"><a href="#dialogs"><big><b>The&nbsp;Dialogs</b></big></a></td>
+      </tr>
+      <tr>
+         <td><a href="#find">The&nbsp;Find&nbsp;Dialog</a></td>
+         <td><a href="#replace">The&nbsp;Replace&nbsp;Dialog</a></td>
+         <td><a href="#goTo">The&nbsp;Go&nbsp;To&nbsp;Dialog</a></td>
+      </tr>
+      <tr>
+         <td><a href="#fontSize">The&nbsp;Font&nbsp;Size&nbsp;Dialogs</a></td>
+         <td><a href="#fileHistory">The&nbsp;Maximum&nbsp;File&nbsp;History&nbsp;Dialog</a></td>
+         <td><a href="#commentsPreferences">The&nbsp;Coding&nbsp;Preferences&nbsp;Dialog</a></td>
+      </tr>
+      <tr>
+         <td><a href="#createTheme">The&nbsp;Create&nbsp;Theme&nbsp;Dialog</a></td>
+         <td><a href="#editTheme">The&nbsp;Edit&nbsp;Theme&nbsp;Picker&nbsp;Dialog</a></td>
+         <td><a href="#themeEditor">The&nbsp;Theme&nbsp;Editor&nbsp;Dialog</a></td>
+         <td><a href="#removeTheme">The&nbsp;Remove&nbsp;Theme&nbsp;Picker&nbsp;Dialog</a></td>
+      </tr>
+      <tr>
+         <td><a href="#cleaner">Curly&nbsp;Pad&nbsp;Cleaner</a></td>
+      </tr>
+      <tr>
+         <td><a href="#pageLinks">Other&nbsp;Help&nbsp;Pages</a></td>
+      </tr>
+   </table>
+   <br>
+   <div class="largesectiondiv" id="menu">
+      <p>
+         The Menu
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="menu.png" alt="Curly&nbsp;Pad&rsquo;s menu">
+   </div>
+   <p>
+      The menu has six items: &ldquo;<u>F</u>ile&rdquo;; &ldquo;<u>E</u>dit&rdquo;; &ldquo;<u>V</u>iew&rdquo;;  &ldquo;Opt<u>i</u>ons&rdquo;; &ldquo;<u>C</u>omment&rdquo; and &ldquo;<u>H</u>elp&rdquo;.  The &ldquo;<u>C</u>omment&rdquo; menu may be hidden by the user. All six of these items have accelerator  keys. All menu items have either accelerator keys (when they have sub&ndash;subitems) or keyboard shortcuts.
+   </p>
+   <div class="smallsectiondiv" id="file">
+      <p>
+         The <u>F</u>ile Menu (<b>ALT+F</b>)
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="fileMenu.png" alt="Curly&nbsp;Pad&rsquo;s File menu">
+   </div>
+   <div class="lefttext">
+      <p id="new">
+         New (<b>CTRL+n</b>)
+      </p>
+      <p class="tab">
+         &ldquo;New&rdquo; clears all text from the text box; if there is any text already in the text box, you will be offered the chance to save it.
+      </p>
+      <p>
+         New Window (<b>CTRL+SHIFT+n</b>)
+      </p>
+      <p class="tab">
+         &ldquo;New Window&rdquo; opens a new, empty <b>Curly&nbsp;Pad</b> window.
+      </p>
+      <p id="open">
+         Open… (<b>CTRL+o</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Open…&rdquo; opens a file requester allowing the user to choose a text file to open.
+      </p>
+      <p>
+         <u>R</u>ecent (<b>ALT+R</b>)
+      </p>
+      <p class="tab">
+         &ldquo;<u>R</u>ecent&rdquo; has a variable number of sub&ndash;subitems. Each of these items displays a fully qualified path to a recently edited text file. The maximum total number of items this list is adjustable by the user (1 minimum, 50 maximum). Files which no longer exist on disc you will be  automatically removed from the list.
+      </p>
+      <p id="save">
+         Save (<b>CTRL+s</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Save&rdquo;
+      </p>
+      <p id="saveAs">
+         Save As… (<b>CTRL+SHIFT+s</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Save As…&rdquo; opens a file requester allowing the user to name the text file to be saved
+         and select its folder.
+      </p>
+      <p>
+         Page Set Up… (<b>CTRL+j</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Page Set Up…&rdquo; opens the Windows built&ndash;in Page Setup dialog.
+      </p>
+      <p id="print">
+         Print… (<b>CTRL+p</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Print…&rdquo; opens the Windows built&ndash;in Print dialog.
+      </p>
+      <p>
+         Exit (<b>ALT+F4</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Exit&rdquo; closes <b>Curly&nbsp;Pad</b>; if there is any text already in the text box, you
+         will be offered the chance to save it.
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="edit">
+      <p>
+         The <u>E</u>dit Menu (<b>ALT+E</b>)
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="editMenu.png" alt="Curly&nbsp;Pad&rsquo;s Edit menu">
+   </div>
+   <div class="lefttext">
+      <p>
+         Undo (<b>CTRL+z</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Undo&rdquo; undoes the last editing action. The undo stack is virtually unlimited (limited only by the amount of RAM in the computer).
+      </p>
+      <p>
+         Redo (<b>CTRL+y</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Redo&rdquo; restores the last undone editing action. The redo stack is virtually unlimited (limited only by the amount of RAM in the computer).
+      </p>
+      <p id="cutting">
+         Cut (<b>CTRL+x</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Cut&rdquo; deletes the selection (moving it to the Clipboard); if nothing is selected nothing will be deleted.
+      </p>
+      <p id="copying">
+         Copy (<b>CTRL+c</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Copy&rdquo; copies the selection (moving it to the Clipboard); if nothing is selected nothing will be copied.
+      </p>
+      <p id="copyAll">
+         Copy All (<b>CTRL+SHIFT+c</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Copy All&rdquo; copies everything (moving it to the Clipboard); if nothing is selected everything will be copied anyway.
+      </p>
+      <p id="copyBeginning">
+         Copy To Beginning (<b>CTRL+SHIFT+Home</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Copy To Beginning&rdquo; copies everything from the current cursor to the very beginning of the file (moving it to the Clipboard); selection is ignored.
+      </p>
+      <p id="copyEnd">
+         Copy To End (<b>CTRL+SHIFT+End</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Copy To End&rdquo; copies everything from the current cursor to the very end of the file (moving it to the Clipboard); selection is ignored.
+      </p>
+      <p id="pasting">
+         Paste (<b>CTRL+v</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Paste&rdquo; moves the Clipboard &rsquo;s textual contents into the text box at the current caret location. If there is no text content on the Clipboard nothing will be pasted.
+      </p>
+      <p>
+         Delete (<b>Del</b> the {DELETE} key)
+      </p>
+      <p class="tab">
+         &ldquo;Delete&rdquo; deletes the current selection or, if nothing is selected,the character immediately following the carrot location is deleted.
+      </p>
+      <p>
+         Trim To Beginning (<b>CTRL+SHIFT+Del</b> the {DELETE} key)
+      </p>
+      <p class="tab">
+         &ldquo;Trim to Beginning&rdquo; deletes everything from the current cursor to the very beginning of the file (<b>NOT</b> moving it to the Clipboard); selection is ignored.
+      </p>
+      <p>
+         Trim To End (<b>CTRL+Alt+Del</b> the {DELETE} key)
+      </p>
+      <p class="tab">
+         &ldquo;Trim To End&rdquo; deletes everything from the current cursor to the very end of the file (<b>NOT</b> moving it to the Clipboard); selection is ignored.
+      </p>
+      <p>
+         Search With Google… (<b>CTRL+e</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Search With Google…&rdquo; open your preferred browser to the <b>Google&nbsp;Advanced&nbsp;Search</b> page. If something is selected in the text box, that selection will be copied to the Clipboard and  thereafter pasted into the &ldquo;all these words:&rdquo; text field.
+      </p>
+      <p>
+         Find… (<b>CTRL+f</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Find…&rdquo; opens the <a href="#find">The&nbsp;Find&nbsp;Dialog</a>.
+      </p>
+      <p>
+         Find Next (<b>F3</b> the number three function key)
+      </p>
+      <p class="tab">
+         &ldquo;Find Next&rdquo; finds (forward) the next existing instance of the last string searched for with the <b>Find</b> dialog.
+      </p>
+      <p>
+         Find Previous (<b>SHIFT+F3</b> the shifted number three function key)
+      </p>
+      <p class="tab">
+         &ldquo;Find Previous&rdquo; finds (backwards) the previous existing instance of the last string searched for with the <b>Find</b> dialog.
+      </p>
+      <div class="notediv">
+         <p>
+            Both &ldquo;Find Next&rdquo; and &ldquo;Find Next&rdquo; wraparound. If the end of the file is reached while searching forward, the search will continue at the beginning of the file. If the beginning of the file is reached while searching backwards, the search will continue at the end of the file.
+         </p>
+      </div>
+      <p>
+         Replace… (<b>CTRL+h</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Replace…&rdquo; opens the <a href="#replace">The&nbsp;Search&nbsp;And&nbsp;Replace&nbsp;Dialog</a>
+      </p>
+      <p>
+         Line Endings (<b>CTRL+h</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Line Endings&rdquo; opens the &ldquo;Line Endings&rdquo; submenu which has five sub&ndash;subitems: &ldquo;\n\n to \r\n&rdquo;; &ldquo;\n to \r\n&rdquo;; &ldquo;\n\r to \r\n&rdquo;; &ldquo;\r\n to \n\n&rdquo; and &ldquo;double space&rdquo;. Each of these sub&ndash;subitems converts the line endings to the specified format.
+      </p>
+      <p class="doubletab">
+         &ldquo;\n\n to \r\n&rdquo; (<b>CTRL+ALT+Shift+2</b>)
+      </p>
+      <p class="doubletab">
+         &ldquo;\n to \r\n&rdquo; (<b>CTRL+ALT+Shift+3</b>)
+      </p>
+      <p class="doubletab">
+         &ldquo;\n\r to \r\n&rdquo; (<b>CTRL+ALT+Shift+4</b>)
+      </p>
+      <p class="doubletab">
+         &ldquo;\r\n to \n\n&rdquo; (<b>CTRL+ALT+Shift+5</b>)
+      </p>
+      <p class="doubletab">
+         &ldquo;double space&rdquo; (<b>CTRL+ALT+Shift+6</b>)
+      </p>
+      <div class="warningdiv">
+         <p>
+            Other than &ldquo;double space&rdquo;, these line ending conversions should only be used if you really know what you are doing!
+         </p>
+      </div>
+      <p>
+         Go To… (<b>CTRL+g</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Go To…&rdquo; opens the <a href="#goTo">The&nbsp;Go&nbsp;To&nbsp;Dialog</a>.
+      </p>
+      <p>
+         Select All (<b>CTRL+a</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Select All&rdquo; selects the entire content of the text box.
+      </p>
+      <p>
+         Select None (<b>CTRL+SHIFT+a</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Select None&rdquo; removes any selection from the text box.
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="view">
+      <p>
+         The <u>V</u>iew Menu (<b>ALT+V</b>)
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="viewMenu.png" alt="Curly&nbsp;Pad&rsquo;s View menu">
+   </div>
+   <div class="lefttext">
+      <p>
+         Word Wrap (<b>CTRL+w</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Word Wrap&rdquo; is a toggle. When checked, word wrapping is turned on and there will be no horizontal scrollbar. When not checked, word wrapping is turned off and there will be a horizontal scrollbar.
+      </p>
+      <p>
+         Always On Top (<b>CTRL+SHIFT+t</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Always On Top&rdquo; is a toggle. When checked, <b>Curly&nbsp;Pad</b> will do its best to force itself to stay on top of all other windows. When not checked, <b>Curly&nbsp;Pad</b> will act in the traditional manner of ducking behind other active windows.
+      </p>
+      <div class="notediv">
+         <p>
+            Windows is not a big fan of this &ldquo;Always On Top&rdquo; behavior! If two (or more) applications request this behavior the results will be unpredictable.
+         </p>
+      </div>
+      <p>
+         Fade In (<b>CTRL+i</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Fade In&rdquo; is a toggle. When checked, <b>Curly&nbsp;Pad</b>&rsquo;s will fade in over a very brief period of time at launch. This may help eyestrain and reduce flickering and flashing.
+      </p>
+      <p>
+         Zoom In (<b>CTRL++</b> either the plus key on the number pad or keyboard)
+      </p>
+      <p class="tab">
+         &ldquo;Zoom In&rdquo; increases the size of the text box font by one point.
+      </p>
+      <p>
+         Zoom Out (<b>CTRL+-</b> either the minus/hyphen key on the number pad or keyboard)
+      </p>
+      <p class="tab">
+         &ldquo;Zoom Out&rdquo; decreases the size of the text box font by one point.
+      </p>
+      <p>
+         Zoom Default (<b>CTRL+0</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Zoom Default&rdquo; restores the size of the text box spot to the last size specifically chosen by the user (not including the use of &ldquo;Zoom In&rdquo; nor &ldquo;Zoom Out&rdquo;). By default, this is 11 points.
+      </p>
+      <u>W</u>heel (<b>ALT+w</b> opens the “<u>W</u>heel” subitem)
+      <p>
+      <p class="tab">
+         &ldquo; Wheel&rdquo; has six subitems: <u></u>; <u></u>; <u></u>; <u></u>; <u></u>; <u></u>. Each controls […under construction…].
+      </p>
+      <div class="warningdiv">
+         <p>
+            Wheeling is under construction! When completed, its menu will match the selected color theme.
+         </p>
+      </div>
+      <u>O</u>pacity (<b>ALT+O</b> opens the “<u>O</u>pacity” subitem)
+      <p class="tab">
+         &ldquo;Opacity&rdquo; has four subitems: <u>3</u>0%; <u>5</u>0%; <u>7</u>5% and <u>O</u>paque. Each controls the amount of opacity(transparency/translucency) of the main window. This might be useful if you are using <b>Curly&nbsp;Pad</b> to edit the text in an underlying application.
+      </p>
+      <p class="doubletab">
+         <u>3</u>0% (<b>ALT+3</b>, <b>CTRL+SHIFT+3</b>) is extremely transparent (can easily be seen through).
+      </p>
+      <p class="doubletab">
+         <u>5</u>0% (<b>ALT+5</b>, <b>CTRL+SHIFT5</b>) is moderately transparent.
+      </p>
+      <p class="doubletab">
+         <u>7</u>5% (<b>ALT+7</b>, <b>CTRL+SHIFT+7</b>) is barely transparent.
+      </p>
+      <p class="doubletab">
+         <u>O</u>paque (<b>ALT+O</b>, <b>CTRL+SHIFT+1</b>) is completely opaque (may not be seen through).
+      </p>
+      <p>
+         Dark Theme (<b>CTRL+d</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Dark Theme&rdquo; is a toggle. When its checked state changes (from <b>on</b> to <b>off</b> or <i>off</i> to <i>on</i>), it forces the entire color scheme to change. This completely overrides any custom color changes made by the user. The dark mode (checked) is white on black and the other mode is black on white.
+      </p>
+      <div class="warningdiv">
+         <p>
+            If any custom colors have been chosen by the user, this item might need to be toggled two or three times to achieve the desired color mode.
+         </p>
+      </div>
+      <p>
+         Coding Tools (<b>CTRL+SHIFT+e</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Coding Tools&rdquo; is a toggle. When checked, the main menu item <a href="#comment">&ldquo;Coding&rdquo;</a> is visible; otherwise it is hidden.
+      </p>
+      <p>
+         Status Bar (<b>CTRL+B</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Status Bar&rdquo; is a toggle. When checked, the <a href="#statusBar">&ldquo;status&nbsp;bar&rdquo;</a> at the bottom of the main window is visible; otherwise it is hidden.
+      </p>
+      <p>
+         <u>T</u>ool Bar (<b>ALT+T</b> opens the <a href="#toolbar"><u>T</u>oolbar</a> subitem)
+      </p>
+      <p class="tab">
+         The numerous menu subitems control the way the toolbar looks. Images of these various sizes and locations may be seen <a href="#toolbar">here</a>.
+      </p>
+      <p class="doubletab">
+         <u>S</u>how Toolbar (<b>ALT+S</b>, <b>CTRL+k</b>) is a toggle. When checked, the toolbar is visible, otherwise it is hidden.
+      </p>
+      <div class="leftsectiondiv">
+         <p>
+            The Tool Bar Location Section
+         </p>
+      </div>
+      <p class="doubletab">
+         <u>T</u>op (<b>ALT+T</b>, <b>CTRL+l</b>), when selected, places the toolbar at the top.
+      </p>
+      <p class="doubletab">
+         <u>B</u>ottom (<b>ALT+B</b>, <b>CTRL+m</b>), when selected, places the toolbar at the bottom.
+      </p>
+      <p class="doubletab">
+         <u>L</u>eft (<b>ALT+L</b>, <b>CTRL+q</b>), when selected, places the toolbar at the left.
+      </p>
+      <p class="doubletab">
+         <u>R</u>ight (<b>ALT+R</b>, <b>CTRL+r</b>), when selected, places the toolbar at the right.
+      </p>
+      <div class="leftsectiondiv">
+         <p>
+            The Tool Bar Size Section
+         </p>
+      </div>
+      <p class="doubletab">
+         <u>1</u>6 (<b>ALT+1</b>, <b>CTRL+1</b>)&nbsp;&mdash;&nbsp;the icons are approximately 16 pixels wide and tall.
+      </p>
+      <p class="doubletab">
+         <u>2</u>4 (<b>ALT+2</b>, <b>CTRL+2</b>)&nbsp;&mdash;&nbsp;the icons are approximately 24 pixels wide and tall.
+      </p>
+      <p class="doubletab">
+         <u>3</u>2 (<b>ALT+3</b>, <b>CTRL+3</b>)&nbsp;&mdash;&nbsp;the icons are approximately 32 pixels wide and tall.
+      </p>
+      <p class="doubletab">
+         <u>6</u>4 (<b>ALT+6</b>, <b>CTRL+6</b>)&nbsp;&mdash;&nbsp;the icons are approximately 64 pixels wide and tall.
+      </p>
+      <p class="doubletab">
+         12<u>8</u> (<b>ALT+8</b>, <b>CTRL+8</b>)&nbsp;&mdash;&nbsp;the icons are approximately 128 pixels wide and tall.
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="options">
+      <p>
+         The Opt<u>i</u>ons Menu (<b>ALT+i</b>)
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="optionsMenu.png" alt="Curly&nbsp;Pad&rsquo;s Options Menu">
+   </div>
+   <p>
+      The subitems of the Options menu control the look, feel and behavior of <b>Curly&nbsp;Pad</b>.
+   </p>
+   <div class="lefttext">
+      <p>
+         Interface Font… (<b>CTRL+SHIFT+f</b>)
+      </p>
+      <p class="tab">
+         The &ldquo;Interface Font…&rdquo; subitem opens the Windows built&ndash;in font picker dialog. This dialog is not very Dragon&ndash;friendly! A truly Dragon&ndash;friendly font picker is available; there are details <a href="#externalFontPicker">here</a>. The Windows built&ndash;in font picker allows the user to change the color of the font but, again, choosing is not easy using Dragon. A Dragon&ndash;friendly color picker is available; there are details <a href="#externalColorPicker">here</a>.
+      </p>
+      <p>
+         Interface Background Color… (<b>CTRL+SHIFT+b</b>)
+      </p>
+      <p class="tab">
+         The &ldquo;Interface Background Color…&rdquo; subitem opens the Windows built&ndash;in color picker dialog. This dialog is not very Dragon&ndash;friendly! A completely Dragon&ndash;friendly color picker is available; there are details <a href="#externalColorPicker">here</a>.
+      </p>
+      <p>
+         Text Font… (<b>CTRL+SHIFT+ALT+f</b>)
+      </p>
+      <p class="tab">
+         The &ldquo;Text Font…&rdquo; subitem opens the Windows built&ndash;in font picker dialog. This dialog is not Dragon&ndash;friendly! A uniquely Dragon&ndash;friendly font picker is available; there are details <a href="#externalFontPicker">here</a>. The Windows built&ndash;in font picker allows the user to change the color of the font but, again, choosing is not easy using Dragon. A Dragon&ndash;friendly color picker is available; there are details <a href="#externalColorPicker">here</a>.
+      </p>
+      <p>
+         Text Background Color… (<b>CTRL+SHIFT+ALT+b</b>)
+      </p>
+      <p class="tab">
+         The &ldquo;Text Background Color…&rdquo; subitem opens the Windows built&ndash;in color picker dialog. This dialog is not Dragon&ndash;friendly! A Dragon&ndash;friendly color picker is available; there are details <a href="#externalColorPicker">here</a>.
+      </p>
+      <p id="externalFontPicker">
+         External Font Picker (<b>ALT+F</b>)
+      </p>
+      <div class="picturediv">
+         <img src="ExternalFontPicker.png" alt="Curly&nbsp;Pad&rsquo;s External Font Picker">
+      </div>
+      <div class="picturediv">
+         <img src="ExternalFontPickerMono.png" alt="Curly&nbsp;Pad&rsquo;s External Color Picker, Monospaced only">
+      </div>
+      <p class="tab">
+         The &ldquo;External Font Picker&rdquo; operates in one of two modes: it can either present every font installed on the computer or it can display all of the monospaced fonts. When presenting every font (especially when there are many fonts installed) creating the dialog might take as much as thirty seconds.
+      </p>
+      <div class="notediv">
+         <p>
+            This dialog does not allow the user to specify a size nor a color.
+         </p>
+      </div>
+      <p class="doubletab">
+         For <u>I</u>nterface… (<b>ALT+I</b>, <b>CTRL+SHIFT+ALT+I</b>)
+      </p>
+      <p class="tripletab">
+         &ldquo;For <u>I</u>nterface…&rdquo; allows the user to choose the interface font using the external font picker. All installed fonts will be offered.
+      </p>
+      <p class="doubletab">
+         <u>M</u>onospaced Textbox Font… (<b>ALT+M</b>, <b>CTRL+SHIFT+ALT+N</b>)
+      </p>
+      <p class="tripletab">
+         &ldquo;<u>M</u>onospaced Textbox Font…&rdquo; allows the user to choose the interface font using the external font picker. Only monospaced (non&ndash;proportional) installed fonts will be offered.
+      </p>
+      <div class="notediv">
+         <p>
+            <big><b>Both the interface and text box fonts&rsquo; sizes may be set individually using the <a href="#fontSize">font&nbsp;size</a> dialog.</b></big>
+         </p>
+      </div>
+      <p id="externalColorPicker">
+         External Color Picker (<b>ALT+F</b>)
+      </p>
+      <div class="picturediv">
+         <img src="ExternalColorPickerDialog.png" alt="Curly&nbsp;Pad&rsquo;s External Color Picker">
+      </div>
+      <p class="tab">
+         The &ldquo;External Color Picker&rdquo; offers the user the choice of all known named colors. Currently, there are over 160 known named colors; these colors are defined by Windows, if this list were to change those changes would be recognized each time the dialog is started.
+      </p>
+      <p class="doubletab">
+         <u>I</u>Interface Font Color… (<b>ALT+I</b>, <b>CTRL+SHIFT+ALT+j</b>)
+      </p>
+      <p class="tripletab">
+         &ldquo;<u>I</u>Interface Font Color…&rdquo; allows the user to choose the interface font color using the external color picker.
+      </p>
+      <p class="doubletab">
+         For Interface <u>B</u>ackground Color… (<b>ALT+B</b>, <b>CTRL+SHIFT+ALT+k</b>)
+      </p>
+      <p class="tripletab">
+         &ldquo;<u>I</u>Interface Background Color…&rdquo; allows the user to choose the interface background color using the external color picker.
+      </p>
+      <p class="doubletab">
+         <u>T</u>ext Font Color… (<b>ALT+T</b>, <b>CTRL+SHIFT+ALT+p</b>)
+      </p>
+      <p class="tripletab">
+         &ldquo;<u>T</u>ext Font Color…&rdquo; allows the user to choose the text box font color using the external color picker.
+      </p>
+      <p class="doubletab">
+         Textbox Background <u>C</u>olor… (<b>ALT+C</b>, <b>CTRL+SHIFT+ALT+q</b>)
+      </p>
+      <p class="tripletab">
+         &ldquo;Textbox Background <u>C</u>olor…&rdquo; allows the user to choose the text box background color using the external color picker.
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="comment">
+      <p>
+         The <u>C</u>oding Menu (<b>ALT+C</b>)
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="codingMenu.png" alt="Curly&nbsp;Pad&rsquo;s Coding Menu">
+   </div>
+   <p>
+      The Coding Menu
+   </p>
+   <div class="lefttext">
+      <p id="commentPreferences">
+         Coding Preferences (<b>CTRL+SHIFT+ALT+s</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Coding Preferences&rdquo; opens the &ldquo;Coding Preferences&rdquo; dialog; details may be found <a href="#commentsPreferences">here</a>.
+      </p>
+      <p id="double">
+         Add Double (<b>CTRL+SHIFT+ALT+d</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Add Double&rdquo; adds &ldquo;//&nbsp;&nbsp;&rdquo; (two forward slashes followed by two spaces) to the beginning of the selected text. If nothing is selected everything will be selected first. If &ldquo;Include Whitespace&rdquo; is checked in the &ldquo;Comment Preferences&rdquo; settings dialog, the forward slashes will be placed at the beginning of the line followed by any white space and then the text. If &ldquo;Comment Out Blank Lines&rdquo; is checked in &ldquo;Comment Preferences&rdquo;, blank lines will have forward slashes added to the line, otherwise they will remain blank.
+      </p>
+      <div class="notediv">
+         <p>
+            If the text in the box looks like this (and nothing is selected, thus everything will be selected):
+         </p>
+         <p class="codediv">
+            The quick brown fox<br />
+            jumped over the lazy dog
+         </p>
+         <p>
+            It should look something like this after <i>adding double</i>:
+         </p>
+         <p class="codediv">
+            //&nbsp;&nbsp;The quick brown fox<br />
+            //&nbsp;&nbsp;jumped over the lazy dog
+         </p>
+         <br />
+      </div>
+      <p id="triple">
+         Add Triple (<b>CTRL+SHIFT+ALT+t</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Add Triple&rdquo; adds &ldquo;///&nbsp;&nbsp;&rdquo; (three forward slashes followed by two or three<big><b>*</b></big> spaces) to the beginning of the selected text. If nothing is selected everything will be selected first. If &ldquo;Include Whitespace&rdquo; is checked in the &ldquo;Comment Preferences&rdquo; settings dialog, the forward slashes will be placed at the beginning of the line followed by any white space and then the text. If &ldquo;Comment Out Blank Lines&rdquo; is checked in &ldquo;Comment Preferences&rdquo;, blank lines will have forward slashes added to the line, otherwise they will remain blank.
+      </p>
+      <div class="notediv">
+         <p>
+            <big><b>*</b></big>&nbsp;if &ldquo;Use Three Spaces&rdquo; is checked, three spaces will be used, otherwise two spaces will be used. This setting only applies to adding triple.
+         </p>
+      </div>
+      <p id="summary">
+         Make Summary (<b>CTRL+SHIFT+ALT+m</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Make Summary&rdquo; adds a summary header to the selection and makes it a triple comment. If nothing is selected everything will be selected.
+      </p>
+      <div class="notediv">
+         <p>
+            If the text in the box looks like this (and nothing is selected, thus everything will be selected):
+         </p>
+         <p class="codediv">
+            The quick brown fox<br />
+            jumped over the lazy dog
+         </p>
+         <p>
+            It should look something like this after <i>adding a summary header</i>:
+         </p>
+         <p class="codediv">
+            ///&nbsp;&nbsp;&nbsp;&lsaquo;Summary&rsaquo;<br />
+            <br />
+            ///&nbsp;&nbsp;&nbsp;The quick brown fox<br />
+            ///&nbsp;&nbsp;&nbsp;jumped over the lazy dog
+         </p>
+         <br />
+      </div>
+      <p id="cPlusPlus">
+         C++ (<b>CTRL+SHIFT+ALT+c</b>)
+      </p>
+      <p class="tab">
+         &ldquo;C++&rdquo; turns the selected text into an old&ndash;fashioned C&ndash; or C++&ndash;style comment. If nothing is selected everything will be selected.
+      </p>
+      <div class="notediv">
+         <p>
+            If the text in the box looks like this (and nothing is selected, thus everything will be selected):
+         </p>
+         <p class="codediv">
+            The quick brown fox<br />
+            jumped over the lazy dog
+         </p>
+         <p>
+            It should look something like this after <i>adding a summary header</i>:
+         </p>
+         <p class="codediv">
+            /*The quick brown fox<br />
+            jumped over the lazy dog*/
+         </p>
+         <br />
+      </div>
+      <p id="out">
+         Comment Out (<b>CTRL+SHIFT+ALT+t</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Comment Out&rdquo; turns the selected text into a more modern C#&ndash;style comment. If nothing is selected everything will be selected. Note that there are no spaces after the slashes.
+      </p>
+      <div class="notediv">
+         <p>
+            If the text in the box looks like this (and nothing is selected, thus everything will be selected):
+         </p>
+         <p class="codediv">
+            The quick brown fox<br />
+            jumped over the lazy dog
+         </p>
+         <p>
+            It should look something like this after <i>adding a summary header</i>:
+         </p>
+         <p class="codediv">
+            //The quick brown fox<br />
+            //jumped over the lazy dog
+         </p>
+         <br />
+      </div>
+      <p id="remove">
+         Remove (<b>CTRL+SHIFT+ALT+r</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Remove&rdquo; removes all commenting marks.
+      </p>
+      <p id="wrap">
+         Wrap (<b>CTRL+SHIFT+ALT+w</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Wrap&rdquo; limits the number of words on a line. It uses two distinctly different algorithms. If &ldquo;Concatenate First&rdquo; is checked in the &ldquo;Comment Preferences&rdquo; dialog, the entire selection (if nothing is selected everything will be selected) will be concatenated into a single line; otherwise, all lines will be treated individually. Each line (there might only be one line)will be split at word boundaries so that no line exceeds the maximum allowed number of characters.
+      </p>
+      <div class="warningdiv">
+         <p>
+            Extremely long words might cause problems if they are longer than the total number of characters allowed!
+         </p>
+      </div>
+      <p id="update">
+         Update (<b>CTRL+SHIFT+ALT+u</b>)
+      </p>
+      <p class="tab">
+         [Not implemented! This item has been left in as an example for other programmers&nbsp;&mdash;&nbsp;they may add their own code]
+      </p>
+      <p id="get">
+         Get (<b>CTRL+SHIFT+ALT+g</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Get&rdquo; clears the current contents of the text box, then copies the selected text from Visual Studio, then puts that text into the text box. If nothing is selected in Visual Studio, nothing will be placed in the text box and the text box will be empty.
+      </p>
+      <p id="replace">
+         Replace (<b>CTRL+SHIFT+ALT+e</b>)
+      </p>
+      <p class="tab">
+         &ldquo;Replace&rdquo; puts the current selection (if nothing is selected, everything will be selected) back into Visual Studio at its current insertion point. If anything is selected in Visual Studio it will be replaced.
+      </p>
+      <p id="implemented">
+         Add Not Implemented (<b>CTRL+SHIFT+ALT+0</b> (zero))
+      </p>
+      <p class="tab">
+         &ldquo;Add Not Implemented&rdquo; modifies the current selection (if nothing is selected, everything will be selected). When Visual Studio automatically creates event handlers it creates function stubs which look something like this:
+      </p>
+      <p class="codediv">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private void XXX_Click(object sender, EventArgs e) {<br />
+         <br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      </p>
+      <p class="doubletab">
+         after performing &ldquo;Add Not Implemented&rdquo; the function stub would look something like this:
+      </p>
+      <p class="codediv">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private void XXX_Click(object sender, EventArgs e) {<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TimedMessage("XXX_Click", "NOT YET IMPLEMENTED");<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      </p>
+      <div class="warningdiv">
+         <p>
+            <b>TimedMessage</b> is a custom function which relies on P/Invoke:
+         </p>
+         <p class="codediv">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void TimedMessage(string pMessage, string pTitle = "", int pDuration = 4500) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_ = MessageBoxTimeout(IntPtr.Zero, pMessage, pTitle, TIMED_MESSAGEBOX_FLAGS, 0, pDuration);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+         </p>
+         <p>
+            <b>TimedMessage</b> P/Invokes:
+         </p>
+         <p class="codediv">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+            public static extern int MessageBoxTimeout(IntPtr hWnd, String lpText, String lpCaption, uint uType, Int16 wLanguageId, Int32
+            dwMilliseconds);
+         </p>
+         <p>
+            <b>TimedMessage</b> uses these TIMED_MESSAGEBOX_FLAGS:
+         </p>
+         <p class="codediv">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private const uint TIMED_MESSAGEBOX_FLAGS = /*MB_OK*/ 0x00000000 | /*MB_SETFOREGROUND*/  0x00010000 |
+            /*MB_SYSTEMMODAL*/ 0x00001000 | /*MB_ICONEXCLAMATION*/ 0x00000030;
+         </p>
+         <p>
+            <b>TimedMessage</b> could be replaced with the standard MessageBox function but it is slightly more Dragon-friendly and includes the ability to set a timeout value.
+         </p>
+      </div>
+      <p id="equality">
+         Reverse Equality (<b>CTRL+SHIFT+ALT+1</b> (one))
+      </p>
+      <p class="tab">
+         &ldquo;Reverse Equality&rdquo; modifies the current selection (if nothing is selected, everything will be selected). The sense of any equality statement is reversed. Something which looks like this:
+      </p>
+      <p class="codediv">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch (sColorUsage) {<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case ColorUsage.AddressBarBackgroundColor:<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usageColor = sCurrentTheme.mAddressBarBackgroundColor;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case ColorUsage.AddressTextBoxBackgroundColor:<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usageColor = sCurrentTheme.mAddressTextBoxBackgroundColor;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      </p>
+      <p class="doubletab">
+         after performing &ldquo;Reverse Equality&rdquo; the selection would look like this:
+      </p>
+      <p class="codediv">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch (sColorUsage) {<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case ColorUsage.AddressBarBackgroundColor:<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sCurrentTheme.mAddressBarBackgroundColor = usageColor;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case ColorUsage.AddressTextBoxBackgroundColor:<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sCurrentTheme.mAddressTextBoxBackgroundColor = usageColor;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      </p>
+      <div class="notediv">
+         <p>
+            The lines which look like:<br />
+            <b>usageColor = sCurrentTheme.mAddressBarBackgroundColor;</b><br />
+            have their equality reversed:<br />
+            <b>sCurrentTheme.mAddressBarBackgroundColor = usageColor</b>;
+         </p>
+      </div>
+   </div>
+   <p id="expressionBodied">
+      Expression-Bodied Method (<b>CTRL+SHIFT+ALT+8</b>)
+   </p>
+   <p class="tab">
+      &ldquo;Expression-Bodied Method&rdquo; modifies the current selection (if nothing is selected, everything will be selected).
+   </p>
+   <p class="codediv">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private void XXX() {<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DoSomething();
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+   </p>
+   <p class="doubletab">
+      after performing &ldquo;Expression-Bodied Method&rdquo; the function would look something like this:
+   </p>
+   <p class="codediv">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private void XXX() => DoSomething();
+   </p>
+   <div class="smallsectiondiv" id="help">
+      <p id="help">
+         The <u>H</u>elp Menu (<b>ALT+H</b> or <b>F1</b> the number one function key )
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="help menu.png" alt="Curly&nbsp;Pad&rsquo;s Help Menu">
+   </div>
+   <div class="lefttext">
+      <p>
+         <u>H</u>elp (<b>ALT+H</b> or <b>F1</b> the number one function key )
+      </p>
+      <p class="tab">
+         &ldquo;<u>H</u>elp&rdquo; opens this Help HTML file in the user&rsquo;s preferred browser.
+      </p>
+   </div>
+   <div class="largesectiondiv" id="toolbar">
+      <p>
+         The Toolbar
+      </p>
+   </div>
+   <div class="imageLabel">
+      <p>
+         <b>The 16x16 Toolbar:</b>
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="toolbar 16.png" alt="Curly&nbsp;Pad&rsquo;s 16x16 Toolbar">
+   </div>
+   <div class="imageLabel">
+      <p>
+         <b>The 24x24 Toolbar:</b>
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="toolbar 24.png" alt="Curly&nbsp;Pad&rsquo;s 24x24 Toolbar">
+   </div>
+   <div class="imageLabel">
+      <p>
+         <b>The 32x32 Toolbar:</b>
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="toolbar 32.png" alt="Curly&nbsp;Pad&rsquo;s 32x32 Toolbar">
+   </div>
+   <div class="imageLabel">
+      <p>
+         <b>The 64x64 Toolbar:</b>
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="toolbar 64.png" alt="Curly&nbsp;Pad&rsquo;s 64x64 Toolbar">
+   </div>
+   <div class="imageLabel">
+      <p>
+         <b>The 128x128 Toolbar:</b>
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="toolbar 128.png" alt="Curly&nbsp;Pad&rsquo;s 128x128 Toolbar">
+   </div>
+   <div class="imageLabel">
+      <p>
+         <b>The 16x16 Toolbar on the bottom:</b>
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="toolbar 16 bottom.png" alt="Curly&nbsp;Pad&rsquo;s 16x16 Toolbar on the bottom">
+   </div>
+   <div class="imageLabel">
+      <p>
+         <b>The 16x16 Toolbar on the left:</b>
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="toolbar 16 left.png" alt="Curly&nbsp;Pad&rsquo;s 16x16 Toolbar on the left">
+   </div>
+   <div class="picturediv">
+      <div class="imageLabel">
+         <p>
+            <b>The 16x16 Toolbar on the right:</b>
+         </p>
+      </div>
+      <img src="toolbar 16 right.png" alt="Curly&nbsp;Pad&rsquo;s 16x16 on the right Toolbar">
+   </div>
+   <div class="smallsectiondiv" id="editing">
+      <p>
+         The Editor Tools
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="editor tools 32.png" alt="Curly&nbsp;Pad&rsquo;s Editor Tools">
+   </div>
+   <div class="lefttext">
+      <p>
+         <u>N</u>ew (<b>ALT+N</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;New&rdquo; icon does, see <a href="#new">here</a>.
+      </p>
+      <p>
+         <u>O</u>pen (<b>ALT+O</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Open&rdquo; icon does, see <a href="#open">here</a>.
+      </p>
+      <p>
+         <u>S</u>ave (<b>ALT+S</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Save&rdquo; icon does, see <a href="#save">here</a>.
+      </p>
+      <p>
+         Save <u>A</u>s (<b>ALT+A</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Save As&rdquo; icon does, see <a href="#saveAs">here</a>.
+      </p>
+      <p>
+         <u>P</u>rint (<b>ALT+P</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Print&rdquo; icon does, see <a href="#print">here</a>.
+      </p>
+      <p>
+         C<u>u</u>t (<b>ALT+u</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Cut&rdquo; icon does, see <a href="#cutting">here</a>.
+      </p>
+      <p>
+         Cop<u>y</u> (<b>ALT+y</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Copy&rdquo; icon does, see <a href="#copying">here</a>.
+      </p>
+      <p>
+         Paste (<b>Ctrl+v</b> “Paste” has no keyboard accelerator key)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Paste&rdquo; icon does, see <a href="#pasting">here</a>.
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="commenting">
+      <p>
+         The Coding Tools
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="commenting tools 32.png" alt="Curly&nbsp;Pad&rsquo;s Coding Tools">
+   </div>
+   <div class="lefttext">
+      <p>
+         Add <u>D</u>ouble (<b>ALT+d</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Add Double&rdquo; icon does, see <a href="#double">here</a>.
+      </p>
+      <p>
+         Add <u>T</u>riple (<b>ALT+t</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Add Triple&rdquo; icon does, see <a href="#triple">here</a>.
+      </p>
+      <p>
+         Comment Summary (<b>CTRL+SHIFT+ALT+m</b> “Comment Summary” has no keyboard accelerator key)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Comment Summary&rdquo; icon does, see <a href="#summary">here</a>.
+      </p>
+      <div class="notediv">
+         <p>
+            The equivalent menu item is called &ldquo;Make Summary&rdquo; but this icon can be exercised by Dragon by saying &ldquo;comment summary&rdquo; or &ldquo;click comment summary&rdquo;.
+         </p>
+      </div>
+      <p>
+         C<u>+</u>+ (<b>ALT++</b> the plus key)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;C++&rdquo; icon does, see <a href="#cPlusPlus">here</a>.
+      </p>
+      <p>
+         Comment <u>R</u>emove (<b>ALT+R</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Comment Removed&rdquo; icon does, see <a href="#remove">here</a>.
+      </p>
+      <div class="notediv">
+         <p>
+            The equivalent menu item is called &ldquo;Remove&rdquo; but this icon can be exercised by Dragon by saying &ldquo;comment remove&rdquo; or &ldquo;click comment remove&rdquo;.
+         </p>
+      </div>
+      <p>
+         Comment <u>W</u>rap (<b>ALT+W</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Comment Wrap&rdquo; icon does, see <a href="#wrap">here</a>.
+      </p>
+      <div class="notediv">
+         <p>
+            The equivalent menu item is called &ldquo;Wrap&rdquo; but this icon can be exercised by Dragon by saying &ldquo;comment wrap&rdquo; or &ldquo;click comment wrap&rdquo;.
+         </p>
+      </div>
+      <p>
+         Comment <u>U</u>pdate (<b>ALT+U</b>)
+      </p>
+      <p class="tab">
+         [This is not implemented – it is left as an example for future programmers]
+         For details about the what the &ldquo;Comment Update&rdquo; icon does, see <a href="#update">here</a>.
+      </p>
+      <p>
+         Comment Out (<b>CTRL+SHIFT+ALT+t</b> “Comment Out” has no keyboard accelerator key)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Comment Out&rdquo; icon does, see <a href="#out">here</a>.
+      </p>
+      <p>
+         <u>G</u>et (<b>ALT+G</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Get&rdquo; icon does, see <a href="#get">here</a>.
+      </p>
+      <p>
+         <u>R</u>eplace (<b>ALT+R</b>)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Replace&rdquo; icon does, see <a href="#replace">here</a>.
+      </p>
+      <p>
+         Coding Preferences (<b>CTRL+SHIFT+ALT+s</b> “Coding Preferences” has no keyboard accelerator key)
+      </p>
+      <p class="tab">
+         For details about the what the &ldquo;Coding Preferences&rdquo; icon does, see <a href="#commentPreferences">here</a>.
+      </p>
+      <div class="smallsectiondiv">
+         <p>
+            The Help Icon
+         </p>
+      </div>
+      <div class="picturediv">
+         <img src="help tool 32.png" alt="Curly&nbsp;Pad&rsquo;s Help Tool">
+      </div>
+      <p>
+         <u>H</u>elp (<b>ALT+H</b> or <b>F1</b> the number one function key )
+      </p>
+      <p class="tab">
+         &ldquo;<u>H</u>elp&rdquo; opens this Help HTML file in the user&rsquo;s preferred browser. It is always at the extreme right end of the toolbar.
+      </p>
+   </div>
+   <div class="largesectiondiv" id="statusBar">
+      <p>
+         The Status Bar
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="status bar.png" alt="Curly&nbsp;Pad&rsquo;s Status Bar">
+   </div>
+   <p>
+      The Status Bar displays the number of characters, words, and lines; it displays the text encoding (e.g. UTF&ndash;8). The four&ndash;digit <b>Curly&nbsp;Pad</b> version number is the last status item.
+   </p>
+   <div class="largesectiondiv" id="dialogs">
+      <p>
+         The Dialogs
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="find">
+      <p>
+         The Find Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="find dialog.png" alt="Curly&nbsp;Pad&rsquo;s Find Dialog">
+   </div>
+   <p>
+      The &ldquo;Find&rdquo; dialog has a single text entry field &ndash; enter the phrase for which you wish to search in this text box. To the right of the text box is the &ldquo;Find Next&rdquo; button; when clicked, using the criteria specified in the &ldquo;Options&rdquo; and &ldquo;Scope&rdquo; GroupBoxes, the next instance of this phrase will be brought into view and highlighted. This &ldquo;Find&rdquo; dialog will close automatically if the phrase is found; if it is not found the dialog will remain open. Clicking the Cancel button will close this dialog without searching for anything.
+   </p>
+   <p id="optionsGroup">
+      The &ldquo;Options&rdquo; GroupBox presents the user with three CheckBoxes: &ldquo;Match Case&rdquo;; &ldquo;Regular Expressions&rdquo; and &ldquo;Whole Word&rdquo;.
+   </p>
+   <p>
+      &ldquo;Match Case&rdquo;, when checked, forces the search to be <b>case-sensitive</b> (e.g. when checked, &ldquo;something&rdquo; will <b>not</b> match with &ldquo;Something&rdquo;; when <b>not</b> checked they <b>will</b> match).
+   </p>
+   <p>
+      &ldquo;Regular Expressions&rdquo;, when checked, allows the use of Regular Expressions when searching.
+   </p>
+   <div class="notediv" id="regularExpressions">
+      <p>
+         The Microsoft <b>Regular Expressions</b> tutorial may be found <a href="https://learn.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2022">here</a>.
+      </p>
+   </div>
+   <p>
+      &ldquo;Whole Word&rdquo;, when checked, forces the search to be limited to whole words (e.g. when checked, if you search for &ldquo;some&rdquo; it will not find &ldquo;something&rdquo;).
+   </p>
+   <div class="warningdiv">
+      <p>
+         Currently, &ldquo;Whole Words&rdquo; is only implemented for &ldquo;Regular Expressions&rdquo;. Note that it is displayed underneath &ldquo;Regular Expressions&rdquo; and slightly indented. When this feature is implemented for all searches it will be moved above &ldquo;Regular Expressions&rdquo; and not indented.
+      </p>
+   </div>
+   <p id="scopeGroup">
+      The &ldquo;Scope&rdquo; GroupBox presents the user with two RadioButtons: &ldquo;Selection&rdquo; and &ldquo;Global&rdquo;. These items are mutually exclusive &ndash; only one may be selected.
+   </p>
+   <p>
+      &ldquo;Selection&rdquo;, when selected, forces the search to be restricted to the selection &ndash; if nothing is selected, nothing will be found.
+   </p>
+   <p>
+      &ldquo;Global&rdquo;, when selected, forces the entire text to be searched.
+   </p>
+   <div class="smallsectiondiv" id="replace">
+      <p>
+         The Search And Replace Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="replace dialog.png" alt="Curly&nbsp;Pad&rsquo;s Search And Replace Dialog">
+   </div>
+   <p>
+      The &ldquo;Search And Replace&rdquo; dialog has two text entry field  &ndash; enter the phrase you wish to replace in the &ldquo;Search For:&rdquo; text box; enter the replacement phrase in the &ldquo;Replace With:&rdquo; text box. To the right of these text boxes are the &ldquo;Replace&rdquo; and &ldquo;Replace All&rdquo; buttons. Wwhen clicked, the &ldquo;Replace&rdquo; button (using the criteria specified in the &ldquo;Options&rdquo; and &ldquo;Scope&rdquo; GroupBoxes) replaces the next instance of the phrase with the replacement phrase. The &ldquo;Replace All&rdquo; button replaces all instances of the phrase with the replacement phrase. This &ldquo;Search And Replace&rdquo; dialog closes automatically if any phrase is replaced; if nothing is replaced the dialog will remain open. Clicking the Cancel button will close this dialog without replacing anything.
+   </p>
+   <p>
+      The &ldquo;Options&rdquo; and &ldquo;Scope&rdquo; GroupBoxes preform exactly like those in the Find dialog; details may be found  <a href="#optionsGroup">here (Options GroupBox)</a> and <a href="#scopeGroup">here (Scope GroupBox)</a>.
+   </p>
+   <div class="smallsectiondiv" id="goTo">
+      <p>
+         The Go To Line Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="go to dialog.png" alt="Curly&nbsp;Pad&rsquo;s Go To Dialog">
+   </div>
+   <p>
+      The &ldquo;Go To&rdquo; dialog allows the user to bring a specific line into view. This is only useful if the user knows the line number for the line of interest.
+   </p>
+   <div class="notediv">
+      <p>
+         Experimental code has been removed which added rudimentary line numbering functionality. Getting this working completely and correctly has proved very challenging! The feature may return in some future version.
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="line numbering.png" alt="Curly&nbsp;Pad&rsquo;s experimental line numbering feature">
+   </div>
+   <div class="smallsectiondiv" id="fontSize">
+      <p>
+         The Font Size Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="font size dialog.png" alt="Curly&nbsp;Pad&rsquo;s Font Size Dialog">
+   </div>
+   <p>
+      The Font Size dialog allows the user to adjust the size of either the interface (GUI) or text box font. This may be done dynamically or statically. When the &ldquo;Close On Okay&rdquo; is checked, the behavior will be static (the dialog will close when the &ldquo;OK&rdquo; button is clicked). When it is <b>not</b> checked, the behavior is dynamic &ndash; the font size change is applied but the dialog remains open so that additional sizes may be tried.
+   </p>
+   <p>
+      The minimum font size is eight (8); the maximum font size is five hundred twelve (512).
+   </p>
+   <div class="notediv">
+      <p>
+         Larger font sizes may be achieved for the text box using the &ldquo;Zoom In&rdquo; feature or controlled mouse wheel scrolling.
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="fileHistory">
+      <p>
+         The Maximum File History Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="file history dialog.png" alt="Curly&nbsp;Pad&rsquo;s Maximum File History  Dialog">
+   </div>
+   <p>
+      The Maximum File History dialog allows the user to control the maximum number of recently opened files which are displayed and stored. The minimum value is zero (0 &ndash; effectively turning the feature off), the maximum value is fifty (50).
+   </p>
+   <div class="smallsectiondiv" id="commentsPreferences">
+      <p>
+         The Coding Preferences Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="comment preferences dialog.png" alt="Curly&nbsp;Pad&rsquo;s Coding Preferences Dialog">
+   </div>
+   <p>
+      The &ldquo;Coding Preferences&rdquo; dialog is <b>only</b> of interest to programmers. It presents a number of settings which control how comments are managed.
+   </p>
+   <p class=tab>
+      The &ldquo;Comment Width&rdquo; GroupBox has a numeric entry widget which controls the number of characters&ndash;per&ndash;line of a comment which has been automatically wordwrapped. The &ldquo;Concatenate First&rdquo; controls whether comments are created on a line&ndash;by&ndash;line basis or if the entire selection is concatenated into a single before wordwrapping.
+   </p>
+   <p class=tab>
+      The &ldquo;Use Three Spaces&rdquo; CheckBox controls the number of spaces after three slashes. When checked, three spaces will be added after a three slash comment; otherwise, two spaces will be added.
+   </p>
+   <p class=tab>
+      The &ldquo;Include Whitespace&rdquo; CheckBox controls whether not the commenting slashes are placed at the extreme front of the line. When checked, the commenting slashes are placed at the very beginning of the line; when not checked, the commenting slashes are placed immediately in front of the first non&ndash;whitespace of the line.
+   </p>
+   <p class=tab>
+      The &ldquo;Comment Out Blank Lines&rdquo; CheckBox controls whether or not blank lines get commenting slashes. When checked, blank lines are commented out; otherwise, blank lines did not get any commenting slashes.
+   </p>
+   <p class=tab>
+      The &ldquo;Tabs Or Spaces&rdquo; GroupBox contains two RadioButtons: &ldquo;Use Tabs&rdquo; and &ldquo;Use Spaces&rdquo;; they are mutually exclusive. When &ldquo;Use Tab&rdquo; is checked, all sets of spaces (as specified in the numeric widget below) will be turned into tabs. When it is not checked, all actual tabs will be turned into spaces (again as specified in the numeric widget). The numeric widget As a minimum value of two (2) and a maximum value of ten (10).
+   </p>
+   <div class="largesectiondiv">
+      <p>
+         The Theme Dialogs
+      </p>
+   </div>
+   <p>
+      Each Theme remembers these features:
+   </p>
+   <p class=shorttab>
+      <b>
+         Theme Name<br>
+         Text Box Font<br>
+         TextBox Font Color<br>
+         TextBox Background Color<br>
+         Interface Font<br>
+         Interface Font Color<br>
+         Interface Background Color<br>
+         Status Bar Background Color (also controls Toolbar Background Color)<br>
+         Dialog Background Color<br>
+      </b>
+   </p>
+   <div class="smallsectiondiv" id="createTheme">
+      <p>
+         The Create Theme Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="create theme dialog.png" alt="Curly&nbsp;Pad&rsquo;s Create Theme Dialog">
+   </div>
+   <p>
+      The Create Theme dialog allows the user to give a name to the currently existing theme options. Theme names must be unique, they are <b>not</b> case-sensitive. Themes are stored in a plain text file located in the users &ldquo;Documents&rdquo; folder, in a subfolder called: &ldquo;Curly_Pad_Data&rdquo;. There is no limit to the number of themes which may be created.
+   </p>
+   <div class="smallsectiondiv" id="editTheme">
+      <p>
+         The Edit Theme Dialogs
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="edit theme dialog.png" alt="Curly&nbsp;Pad&rsquo;s Edit Theme Picker Dialog">
+   </div>
+   <p>
+      The Edit Theme picker dialog presents all of the existing themes (except &ldquo;Dark&rdquo; and &ldquo;Light&rdquo; &ndash; which are built-in and may not be edited). Choosing any of these opens the actual theme editor dialog.
+   </p>
+   <br />
+   <div class="picturediv" id="themeEditor">
+      <img src="theme editor.png" alt="Curly&nbsp;Pad&rsquo;s Theme Editor Dialog">
+   </div>
+   <p>
+      The Theme Editor dialog presents the selected theme for editing. All of the theme&rsquo;s features may be changed. Each color swatch reflects the color associated with the button immediately to its left. These color swatches may be clicked just like the button to which it is associated.
+   </p>
+   <div class="warningdiv">
+      <p>
+         This dialog&rsquo;s layout design may change slightly in the future. Status Bar background color and dialog background color items might move into the Interface GroupBox.
+      </p>
+   </div>
+   <div class="smallsectiondiv" id="removeTheme">
+      <p>
+         The Remove Theme Dialog
+      </p>
+   </div>
+   <div class="picturediv">
+      <img src="remove theme dialog.png" alt="Curly&nbsp;Pad&rsquo;s Remove Theme Dialog">
+   </div>
+   <p>
+      The Remove Theme dialog presents all of the existing themes (except &ldquo;Dark&rdquo; and &ldquo;Light&rdquo; &ndash; which are built-in and may not be removed). Choosing any of these immediately removes the theme &ndash; this is a destructive action and may not be undone.
+   </p>
+   <div class="smallsectiondiv" id="cleaner">
+      <p>
+         Curly&nbsp;Pad&rsquo;s Cleaner
+      </p>
+   </div>
+   <p>
+      This &ldquo;Cleaner&rdquo; will remove <b>Curly&nbsp;Pad</b>&rsquo;s cache folder(s) and its recent file history. You may preserve your recent files history by renaming its text file which is located in the folder in which <b>Curly&nbsp;Pad</b> is installed. The file name is: &ldquo;RecentFileHistory.txt&rdquo;&ndash;just rename it to something obvious like &ldquo;XRecentFileHistory.txt&rdquo; before you run the &ldquo;Cleaner&rdquo;; then, after the cleaner has finished, rename it back to its original name: &ldquo;RecentFileHistory.txt&rdquo;.
+   </p>
+   <div class="pageslinkdiv">
+      <h3 id="pageLinks">Other Pages</h3>
+      <p><a href="Curly&nbsp;Pad Keyboard Shortcuts.html">Keyboard Shortcuts Page</a></p>
+      <p><a href="External Color Picker Help.html">External Color Picker Help Page</a>
+      <p><a href="External Font Picker Help.html">External Font Picker Help Page</a>
+   </div>
+</body>
+</html>
