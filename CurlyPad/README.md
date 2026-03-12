@@ -5,3 +5,5 @@ separate installer for it. Instead, you can just download the zip file, extract 
 and run the CurlyPad.exe file. This archive includes the complete solution with
 source and documentation, so you can open it in Visual Studio and build it yourself.
 Currently, this repository only has the archive source, not an (archived) installer.
+Please keep any discussion on the KnowBrainer forum (Third-party…), and I will try to 
+answer any questions there. Thanks for your interest in CurlyPad!
