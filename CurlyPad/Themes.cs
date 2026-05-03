@@ -107,13 +107,13 @@ namespace CurlyPad {
 
       private void LayoutCreateThemePanel() {
          createThemeNameTextBox.Clear();
-         controlList.Clear();
+         sControlList.Clear();
          createThemeNamePrefixButton.Top = createThemeTitleLabel.Bottom + (sWidgetBigVerticalOffset * 2);
          createThemeNameTextBox.Location = new Point(createThemeNamePrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
             createThemeNamePrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
-         controlList.Add(createThemeNamePrefixButton);
-         controlList.Add(createThemeNameTextBox);
-         createThemeOkayButton.Location = new Point(sIndent, Bottommost(controlList) + (sWidgetBigVerticalOffset * 2));
+         sControlList.Add(createThemeNamePrefixButton);
+         sControlList.Add(createThemeNameTextBox);
+         createThemeOkayButton.Location = new Point(sIndent, Bottommost(sControlList) + (sWidgetBigVerticalOffset * 2));
          createThemeCancelButton.Top = createThemeOkayButton.Top;
          SizePanel(createThemePanel);
          createThemeCancelButton.Left = createThemePanel.Width - sCancelOffset - createThemeCancelButton.Width;
@@ -621,22 +621,19 @@ namespace CurlyPad {
       #region theme file procedures
       private static void SaveThemes() {
          try {
-            if (sThemeList.Count < 3)
+            int userThemeCount = sThemeList.Count - 2; //efm5 Dark and Light are always first; never saved
+            if (userThemeCount < 1)
                return;
-            sThemeList.RemoveAt(0);//Dark            
-            sThemeList.RemoveAt(0);//Light
-
             Directory.CreateDirectory(sMyDocumentsCurlyPadData);
             if (File.Exists(sMyDocumentsCurlyPadData + sThemesFile))
                File.Delete(sMyDocumentsCurlyPadData + sThemesFile);
             using (StreamWriter writer = new StreamWriter(sMyDocumentsCurlyPadData + sThemesFile)) {
                writer.WriteLine(sThemesHeader);
                writer.WriteLine(string.Format("{0}{1}", sThemesVersion, THEMES_VERSION));
-               writer.WriteLine(string.Format("{0}{1}", sNumberOfThemes, sThemeList.Count));
+               writer.WriteLine(string.Format("{0}{1}", sNumberOfThemes, userThemeCount));
                writer.WriteLine(string.Empty);
-
-               foreach (Theme theme in sThemeList)
-                  theme.Write(writer);
+               for (int i = 2; i < sThemeList.Count; i++) //efm5 skip Dark (0) and Light (1)
+                  sThemeList[i].Write(writer);
                writer.WriteLine(string.Empty);
             }
          }

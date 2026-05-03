@@ -101,13 +101,13 @@ namespace CurlyPad {
          sizeFontCloseOnOkayCheckBox.CheckedChanged -= SizeFontCloseOnOkayCheckBox_CheckedChanged;
          sizeFontCloseOnOkayCheckBox.Checked = Settings.Default.FontSizeCloseOnOkay;
          sizeFontCloseOnOkayCheckBox.CheckedChanged += SizeFontCloseOnOkayCheckBox_CheckedChanged;
-         controlList.Clear();
+         sControlList.Clear();
          fontSizePrefixButton.Top = fontSizeTitleLabel.Bottom + (sWidgetBigVerticalOffset * 2);
          fontSizeUpDown.Location = new Point(fontSizePrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
             fontSizePrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
-         controlList.Add(fontSizePrefixButton);
-         controlList.Add(fontSizeUpDown);
-         sizeFontCloseOnOkayCheckBox.Top = Bottommost(controlList) + (sWidgetBigVerticalOffset * 2);
+         sControlList.Add(fontSizePrefixButton);
+         sControlList.Add(fontSizeUpDown);
+         sizeFontCloseOnOkayCheckBox.Top = Bottommost(sControlList) + (sWidgetBigVerticalOffset * 2);
          fontSizeOkayButton.Location = new Point(sIndent, sizeFontCloseOnOkayCheckBox.Bottom + (sWidgetBigVerticalOffset * 2));
          fontSizeCancelButton.Top = fontSizeOkayButton.Top;
          fontSizePanel.Size = new Size(

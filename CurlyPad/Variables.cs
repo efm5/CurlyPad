@@ -10,12 +10,12 @@ namespace CurlyPad {
       #region private static, readonly & constant variables
       private const int THEMES_VERSION = 1, DARK_THEME = 0, LIGHT_THEME = 1, FIND_WIDTH = 200;
       private static bool sIsCntrolKeyDown = false, sNeedsSizing = false, sDoing = false;
-      private static readonly Color darkGray = Color.FromArgb(255, 50, 50, 50),
-         darkWhite = Color.FromArgb(255, 205, 205, 205),
-         lightRed = Color.FromArgb(255, 255, 200, 200),
-         darkRed = Color.FromArgb(255, 50, 0, 0);
+      private static readonly Color sDarkGray = Color.FromArgb(255, 50, 50, 50),
+         sDarkWhite = Color.FromArgb(255, 205, 205, 205),
+         sLightRed = Color.FromArgb(255, 255, 200, 200),
+         sDarkRed = Color.FromArgb(255, 50, 0, 0);
       private static ColorUsage sColorUsage = ColorUsage.Text;
-      private static List<Control> controlList = new List<Control>();
+      private static List<Control> sControlList = new List<Control>();
       private static float sZoomLevel = 0;
       private static Form? sForm = null;
       private const int WINDOW_REDUCER = 7, CLIPBOARD_DELAY = 300;
@@ -69,7 +69,7 @@ namespace CurlyPad {
       //efm5 Currently they are in alphabetical order
       //efm5 The first "All Files" is not actually alphabetized – keep it first
          sExtensionsFilter = "All Files|*.*|Auto Hot Key Files|*.ahk|AutoIT Files|*.au3|Batch Files|*.bat|C# Source Files|*.cs|" +
-            "C++ Source Files|*.c++|C Source Files|*.c|CSV Files|.csv|Commandline Scripts|*.cmd|DVC Files|*.dvc|" +
+            "C++ Source Files|*.c++|C Source Files|*.c|CSV Files|*.csv|Commandline Scripts|*.cmd|DVC Files|*.dvc|" +
             "HTM Files|*.htm|HTML Files|*.html|INI Files|*.ini|LOG Files|*.log|Registry Files|*.reg|Text Files|*.txt|" +
             "VBS Files|*.vbs|XML Files|*.xml";
       private static readonly string[] sAcceptableExtensions = new string[] { ".ahk", ".au3", ".bat", ".cs", ".c++", ".c", ".csv", ".cmd",
@@ -86,12 +86,12 @@ namespace CurlyPad {
          new Font("Arial", 12f, FontStyle.Regular),
          new Font("Segoe UI", 10f, FontStyle.Regular), Color.White,
             Color.Black, Color.White, Color.Black,
-            darkRed, darkGray),
+            sDarkRed, sDarkGray),
       new Theme("Light",
          new Font("Arial", 12f, FontStyle.Regular),
          new Font("Segoe UI", 10f, FontStyle.Regular), Color.Black,
             Color.White, Color.Black, Color.White,
-            lightRed, darkWhite)
+            sLightRed, sDarkWhite)
       };
       private static Theme? sCurrentTheme = sThemeList[DARK_THEME], sDarkTheme = sThemeList[DARK_THEME],
          sLightTheme = sThemeList[LIGHT_THEME], sTemporaryTheme = new Theme();
@@ -110,11 +110,11 @@ namespace CurlyPad {
 
       #region classes
       public class UnReDoData {
-         public int sSelectionStart = 0;
+         public int mSelectionStart = 0;
          public string mTextString = string.Empty;
 
          public UnReDoData(int pSelectionStart, string pTextString) {
-            sSelectionStart = pSelectionStart;
+            mSelectionStart = pSelectionStart;
             mTextString = pTextString;
          }
       }
@@ -183,8 +183,8 @@ namespace CurlyPad {
             mTextBoxBackgroundColor = Color.Black;
             mInterfaceFontColor = Color.White;
             mInterfaceBackgroundColor = Color.Black;
-            mStatusBarBackgroundColor = darkRed;
-            mPanelBackgroundColor = darkGray;
+            mStatusBarBackgroundColor = sDarkRed;
+            mPanelBackgroundColor = sDarkGray;
          }
 
          public Theme(string pName, Font pTextBoxFont, Font pInterfaceFont, Color pTextBoxFontColor, Color pTextBoxBackgroundColor,

@@ -492,7 +492,7 @@ namespace CurlyPad {
       }
 
       private void LayoutCommentPreferencesPanel() {
-         controlList.Clear();
+         sControlList.Clear();
          commentPreferencesTitleLabel.Top = 10;
          commentWidthGroupBox.Top = commentPreferencesTitleLabel.Bottom + (sWidgetBigVerticalOffset * 2);
          commentWidthPrefixButton.Top = GetGroupBoxFirstLineOffset(commentWidthGroupBox);
@@ -500,10 +500,10 @@ namespace CurlyPad {
             commentWidthPrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
          commentWrapWidthLabel.Location = new Point(commentWidthUpDown.Right + sAssociatedUpDownPostButtonHorizontalSpace,
             commentWidthUpDown.Top + sAssociatedUpDownPostButtonVerticalOffset);
-         controlList.Add(commentWidthPrefixButton);
-         controlList.Add(commentWidthUpDown);
-         controlList.Add(commentWrapWidthLabel);
-         codingConcatenateCheckBox.Top = Bottommost(controlList) + sWidgetBigVerticalOffset;
+         sControlList.Add(commentWidthPrefixButton);
+         sControlList.Add(commentWidthUpDown);
+         sControlList.Add(commentWrapWidthLabel);
+         codingConcatenateCheckBox.Top = Bottommost(sControlList) + sWidgetBigVerticalOffset;
          SizeGroupBox(commentWidthGroupBox);
          codingUseThreeSpacesCheckBox.Top = commentWidthGroupBox.Bottom + (sWidgetBigVerticalOffset * 2);
          codingPreserveWhiteSpaceCheckBox.Top = codingUseThreeSpacesCheckBox.Bottom + sWidgetVerticalOffset;
@@ -511,10 +511,10 @@ namespace CurlyPad {
          codingTabsVsSpacesGroupBox.Top = codingOutBlanksCheckBox.Bottom + sWidgetBigVerticalOffset;
          codingUseTabsRadioButton.Top = GetGroupBoxFirstLineOffset(codingTabsVsSpacesGroupBox);
          codingUseSpacesRadioButton.Location = new Point(codingUseTabsRadioButton.Right + sWidgetVerticalOffset, codingUseTabsRadioButton.Top);
-         controlList.Clear();
-         controlList.Add(codingUseTabsRadioButton);
-         controlList.Add(codingUseSpacesRadioButton);
-         codingSpacesPerTabPrefixButton.Top = Bottommost(controlList);
+         sControlList.Clear();
+         sControlList.Add(codingUseTabsRadioButton);
+         sControlList.Add(codingUseSpacesRadioButton);
+         codingSpacesPerTabPrefixButton.Top = Bottommost(sControlList);
          codingSpacesPerTabUpDown.Location = new Point(codingSpacesPerTabPrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
             codingSpacesPerTabPrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
          codingSpacesPerTabLabel.Location = new Point(codingSpacesPerTabUpDown.Right + sAssociatedUpDownPostButtonHorizontalSpace,

@@ -5,16 +5,18 @@
             sDoing = false;
             return;
          }
+         sRedoList.Clear(); //efm5 new input invalidates redo history
          if (!string.IsNullOrEmpty(textBox.Text)) {
             textBox.Modified = true;
             if (sUndoList.Count > 0) {
                UnReDoData unReDoData = sUndoList.Last();
-               if ((unReDoData.mTextString != textBox.Text) && (unReDoData.sSelectionStart != textBox.SelectionStart))
+               if ((unReDoData.mTextString != textBox.Text) || (unReDoData.mSelectionStart != textBox.SelectionStart))
                   sUndoList.Add(new UnReDoData(textBox.SelectionStart, textBox.Text));
             }
             else
                sUndoList.Add(new UnReDoData(textBox.SelectionStart, textBox.Text));
-            //CheckDoItems();
+            if (sUndoList.Count > 500) //efm5 cap undo history to prevent unbounded memory growth
+               sUndoList.RemoveAt(0);
          }
          else
             textBox.Modified = false;
@@ -89,6 +91,10 @@
 
       private void TextBox_Click(object? pSender, EventArgs pE) {
          UpdateStatusBar();
+      }
+
+      private void TextBox_Enter(object? pSender, EventArgs pE) {
+         BeginInvoke(new Action(() => { textBox.SelectAll(); }));
       }
    }
 }

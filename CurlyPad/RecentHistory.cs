@@ -47,16 +47,16 @@ namespace CurlyPad {
 
       private void LayoutRecentFilesHistoryPanel() {
          recentFilesHistoryUpDown.Value = Settings.Default.RecentFileHistoryLimit;
-         controlList.Clear();
+         sControlList.Clear();
          recentFilesHistoryPrefixButton.Top = recentFilesHistoryTitleLabel.Bottom + (sWidgetBigVerticalOffset * 2);
          recentFilesHistoryUpDown.Location = new Point(recentFilesHistoryPrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
             recentFilesHistoryPrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
          fileHistoryMinMaxLabel.Location = new Point(recentFilesHistoryUpDown.Right + sAssociatedLabelPostUpDownHorizontalSpace,
             recentFilesHistoryUpDown.Top + sAssociatedLabelPostUpDownVerticalOffset);
-         controlList.Add(recentFilesHistoryPrefixButton);
-         controlList.Add(recentFilesHistoryUpDown);
+         sControlList.Add(recentFilesHistoryPrefixButton);
+         sControlList.Add(recentFilesHistoryUpDown);
          clearFileHistoryButton.Location = new Point(sIndent,
-            Bottommost(controlList) + (sWidgetBigVerticalOffset * 2));
+            Bottommost(sControlList) + (sWidgetBigVerticalOffset * 2));
          done.Location = new Point(clearFileHistoryButton.Right + sWidgetHorizontalSpace, clearFileHistoryButton.Top);
          recentFilesHistoryOkayButton.Location = new Point(clearFileHistoryButton.Right + sWidgetBigHorizontalSpace,
             clearFileHistoryButton.Top);

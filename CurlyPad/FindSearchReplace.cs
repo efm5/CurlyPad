@@ -165,24 +165,24 @@ namespace CurlyPad {
       #region find procedures
       private void LayoutFindPanel() {
          findVerboseCheckBox.Checked = Settings.Default.VerboseFind;
-         controlList.Clear();
+         sControlList.Clear();
          findWhatPrefixButton.Top = findTitleLabel.Bottom + (sWidgetBigVerticalOffset * 2);
          SizeTextBoxToFitString(out SizeF sizeF, findTextBox);
          findTextBox.Size = new Size(FIND_WIDTH, (int)sizeF.Height);
          findTextBox.Location = new Point(findWhatPrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
            findWhatPrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
          findButton.Location = new Point(findTextBox.Right + sWidgetBigHorizontalSpace,
-            findTextBox.Top + sAssociatedButtonPostTextBoxVerticalOffset);
-         controlList.Add(findWhatPrefixButton);
-         controlList.Add(findTextBox);
-         findCheckBoxGroupBox.Location = new Point(sIndent, Bottommost(controlList) + (sWidgetBigVerticalOffset * 2));
+           findTextBox.Top + sAssociatedButtonPostTextBoxVerticalOffset);
+         sControlList.Add(findWhatPrefixButton);
+         sControlList.Add(findTextBox);
+         findCheckBoxGroupBox.Location = new Point(sIndent, Bottommost(sControlList) + (sWidgetBigVerticalOffset * 2));
          findMatchCaseCheckBox.Location = new Point(sGroupLeftPad, GetGroupBoxFirstLineOffset(findCheckBoxGroupBox));
          findWholeWordCheckBox.Location = new Point(sGroupLeftPad, findMatchCaseCheckBox.Bottom + sWidgetVerticalOffset);
          findRegularExpressionsCheckBox.Location = new Point(sGroupLeftPad, findWholeWordCheckBox.Bottom + sWidgetBigVerticalOffset);
          findVerboseCheckBox.Location = new Point(sGroupLeftPad, findRegularExpressionsCheckBox.Bottom + sWidgetBigVerticalOffset);
          SizeGroupBox(findCheckBoxGroupBox);
          findScopeGroupBox.Location = new Point(findCheckBoxGroupBox.Right + (sWidgetBigVerticalOffset * 2),
-            findCheckBoxGroupBox.Top);
+           findCheckBoxGroupBox.Top);
          findSelectionRadioButton.Location = new Point(sGroupLeftPad, GetGroupBoxFirstLineOffset(findScopeGroupBox));
          findGlobalRadioButton.Location = new Point(sGroupLeftPad, findSelectionRadioButton.Bottom + sWidgetVerticalOffset);
          SizeGroupBox(findScopeGroupBox);
@@ -246,26 +246,26 @@ namespace CurlyPad {
       #region replace procedures
       private void LayoutReplacePanel() {
          replaceVerboseCheckBox.Checked = Settings.Default.VerboseReplace;
-         controlList.Clear();
+         sControlList.Clear();
          searchSearchPrefixButton.Top = replaceTitleLabel.Bottom + (sWidgetBigVerticalOffset * 2);
          SizeTextBoxToFitString(out SizeF sizeFS, searchTextBox);
          searchTextBox.Size = new Size(FIND_WIDTH, (int)sizeFS.Height);
          searchTextBox.Location = new Point(searchSearchPrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
            searchSearchPrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
          replaceButton.Location = new Point(searchTextBox.Right + sWidgetBigHorizontalSpace,
-            searchTextBox.Top + sAssociatedButtonPostTextBoxVerticalOffset);
-         controlList.Add(searchSearchPrefixButton);
-         controlList.Add(searchTextBox);
-         searchReplacePrefixButton.Top = Bottommost(controlList) + sWidgetBigVerticalOffset;
+           searchTextBox.Top + sAssociatedButtonPostTextBoxVerticalOffset);
+         sControlList.Add(searchSearchPrefixButton);
+         sControlList.Add(searchTextBox);
+         searchReplacePrefixButton.Top = Bottommost(sControlList) + sWidgetBigVerticalOffset;
          SizeTextBoxToFitString(out SizeF sizeFR, replaceTextBox);
          replaceTextBox.Size = new Size(FIND_WIDTH, (int)sizeFR.Height);
          replaceTextBox.Location = new Point(searchReplacePrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
            searchReplacePrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
          replaceAllButton.Location = new Point(replaceTextBox.Right + sWidgetBigHorizontalSpace,
-            replaceTextBox.Top + sAssociatedButtonPostTextBoxVerticalOffset);
-         controlList.Add(searchReplacePrefixButton);
-         controlList.Add(replaceTextBox);
-         replaceCheckBoxGroupBox.Location = new Point(sIndent, Bottommost(controlList) + (sWidgetBigVerticalOffset * 2));
+           replaceTextBox.Top + sAssociatedButtonPostTextBoxVerticalOffset);
+         sControlList.Add(searchReplacePrefixButton);
+         sControlList.Add(replaceTextBox);
+         replaceCheckBoxGroupBox.Location = new Point(sIndent, Bottommost(sControlList) + (sWidgetBigVerticalOffset * 2));
          replaceMatchCaseCheckBox.Location = new Point(sGroupLeftPad, GetGroupBoxFirstLineOffset(replaceCheckBoxGroupBox));
          replaceWholeWordCheckBox.Location = new Point(sGroupLeftPad, replaceMatchCaseCheckBox.Bottom + sWidgetVerticalOffset);
          replaceRegularExpressionsCheckBox.Location = new Point(sGroupLeftPad, replaceWholeWordCheckBox.Bottom + sWidgetBigVerticalOffset);

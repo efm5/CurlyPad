@@ -25,16 +25,16 @@ namespace CurlyPad {
          TopMost = true;//efm5 Temporarily just to force it to come out on top
          InitializeComponent();
          sForm = this;
-         searchTextBox.Enter += (pSender, pE) => {
-            this.BeginInvoke(new Action(() => {
-               searchTextBox.SelectAll();
-            }));
-         };
-         replaceTextBox.Enter += (pSender, pE) => {
-            this.BeginInvoke(new Action(() => {
-               replaceTextBox.SelectAll();
-            }));
-         };
+         searchTextBox.Enter += SearchTextBox_Enter;
+         replaceTextBox.Enter += ReplaceTextBox_Enter;
+      }
+
+      private void SearchTextBox_Enter(object? pSender, EventArgs pE) {
+         BeginInvoke(new Action(() => { searchTextBox.SelectAll(); }));
+      }
+
+      private void ReplaceTextBox_Enter(object? pSender, EventArgs pE) {
+         BeginInvoke(new Action(() => { replaceTextBox.SelectAll(); }));
       }
    }
 }

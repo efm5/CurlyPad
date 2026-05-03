@@ -54,11 +54,7 @@ namespace CurlyPad {
          if (!string.IsNullOrEmpty(sImportedText))
             sUndoList.Add(new UnReDoData(0, sImportedText));
          LayoutMain();
-         textBox.Enter += (pSender, pE) => {
-            this.BeginInvoke(new Action(() => {
-               textBox.SelectAll();
-            }));
-         };
+         textBox.Enter += TextBox_Enter;
       }
 
       private void CurlyPad_FormClosing(object pSender, FormClosingEventArgs pE) {
@@ -509,7 +505,7 @@ namespace CurlyPad {
             UnReDoData previousData = sUndoList.Last();
             textBox.TextChanged -= TextBox_TextChanged;
             textBox.Text = previousData.mTextString;
-            textBox.SelectionStart = currentData.sSelectionStart;
+            textBox.SelectionStart = currentData.mSelectionStart;
             textBox.ScrollToCaret();
             textBox.TextChanged += TextBox_TextChanged;
          }
@@ -540,7 +536,7 @@ namespace CurlyPad {
          UnReDoData unReDoData = sRedoList.Last();
          textBox.TextChanged -= TextBox_TextChanged;
          textBox.Text = unReDoData.mTextString;
-         textBox.SelectionStart = unReDoData.sSelectionStart;
+         textBox.SelectionStart = unReDoData.mSelectionStart;
          textBox.ScrollToCaret();
          textBox.TextChanged += TextBox_TextChanged;
          sRedoList.RemoveAt(sRedoList.Count - 1);

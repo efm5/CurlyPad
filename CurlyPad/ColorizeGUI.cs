@@ -327,9 +327,9 @@ namespace CurlyPad {
          pControl.FlatAppearance.BorderSize = 0;
          pControl.FlatStyle = FlatStyle.Flat;
          if (string.Equals(Settings.Default.Theme, "Dark", StringComparison.OrdinalIgnoreCase))
-            pControl.FlatAppearance.BorderColor = darkGray;
+            pControl.FlatAppearance.BorderColor = sDarkGray;
          else if (string.Equals(Settings.Default.Theme, "Light", StringComparison.OrdinalIgnoreCase))
-            pControl.FlatAppearance.BorderColor = darkWhite;
+            pControl.FlatAppearance.BorderColor = sDarkWhite;
          else
             pControl.FlatAppearance.BorderColor = Color.Gray;//DEBUG efm5 2024 04 5 do it right
       }

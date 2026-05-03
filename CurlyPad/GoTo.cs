@@ -41,13 +41,13 @@
       #endregion
 
       private void LayoutGoToPanel() {
-         controlList.Clear();
+         sControlList.Clear();
          goToPrefixButton.Top = goTitleLabel.Bottom + (sWidgetBigVerticalOffset * 2);
          goUpDown.Location = new Point(goToPrefixButton.Right + sAssociatedUpDownPostButtonHorizontalSpace,
             goToPrefixButton.Top + sAssociatedUpDownPostButtonVerticalOffset);
-         controlList.Add(goToPrefixButton);
-         controlList.Add(goUpDown);
-         goToGoButton.Location = new Point(sIndent, Bottommost(controlList) + (sWidgetBigVerticalOffset * 2));
+         sControlList.Add(goToPrefixButton);
+         sControlList.Add(goUpDown);
+         goToGoButton.Location = new Point(sIndent, Bottommost(sControlList) + (sWidgetBigVerticalOffset * 2));
          goCancelButton.Top = goToGoButton.Top;
          goPanel.Size = new Size(goTitleLabel.Left + goTitleLabel.Width + goTitleLabel.Left,
             goToGoButton.Bottom + sWidgetBigVerticalOffset);
