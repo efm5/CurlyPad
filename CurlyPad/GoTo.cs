@@ -36,7 +36,7 @@
 
       private void GoToGoButton_Click(object pSender, EventArgs pE) {
          CloseGo();
-         GotoLine((int)goUpDown.Value);
+         GotoLine(Math.Max(0, Math.Min((int)goUpDown.Value, textBox.Lines.Length - 1)));
       }
       #endregion
 
@@ -56,7 +56,7 @@
       }
 
       private static void GotoLine(int pLine) {// 1st line = 0
-         textBox.Select(textBox.GetFirstCharIndexFromLine(pLine) - 1, 0);
+         textBox.Select(textBox.GetFirstCharIndexFromLine(pLine), 0);
          textBox.ScrollToCaret();
       }
 

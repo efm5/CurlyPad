@@ -50,6 +50,9 @@ namespace CurlyPad {
          searchTextBox.Text = Settings.Default.ReplaceSearchString;
          replaceTextBox.Text = Settings.Default.ReplaceReplaceString;
          allIfNothingTSMI.Checked = Settings.Default.AllIfNothing;
+         sUndoList.Add(new UnReDoData(0, string.Empty));//Seed
+         if (!string.IsNullOrEmpty(sImportedText))
+            sUndoList.Add(new UnReDoData(0, sImportedText));
          LayoutMain();
          textBox.Enter += (pSender, pE) => {
             this.BeginInvoke(new Action(() => {
@@ -469,28 +472,6 @@ namespace CurlyPad {
          }
       }
 
-      private void PrintPreviewTSMI_Click(object pSender, EventArgs pE) {
-         try {
-            // Create a new printPreviewDialog using constructor.
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog() {
-               ClientSize = new Size(700, 600),
-               MinimumSize = new Size(375, 250),
-               UseAntiAlias = true,
-               Document = sPreviewDocument,
-               Text = "SP Zen Editor Print Preview"
-            };
-            sPreviewDocument.PrintPage += new PrintPageEventHandler(PreviewDocument_PrintPage);
-            if (textBox.SelectionLength > 0)
-               sTextToPrint = textBox.SelectedText;
-            else
-               sTextToPrint = textBox.Text;
-            printPreviewDialog.ShowDialog();
-         }
-         catch (Exception pException) {
-            TimedMessage("PrintPreviewTSMI_Click threw an exception." + Environment.NewLine + pException.ToString(), "ERROR", 0);
-         }
-      }
-
       private void PreviewDocument_PrintPage(object pSender, PrintPageEventArgs pE) {
          try {
             Font printFont = CreateNewFont(textBox.Font);
@@ -522,15 +503,33 @@ namespace CurlyPad {
          sDoing = true;
          if (!string.IsNullOrEmpty(textBox.Text))
             sRedoList.Add(new UnReDoData(textBox.SelectionStart, textBox.Text));
+         UnReDoData currentData = sUndoList.Last();
          sUndoList.RemoveAt(sUndoList.Count - 1);
          if (sUndoList.Count > 0) {
-            UnReDoData unReDoData = sUndoList.Last();
-            textBox.Text = unReDoData.mTextString;
-            textBox.SelectionStart = unReDoData.sSelectionStart;
+            UnReDoData previousData = sUndoList.Last();
+            textBox.TextChanged -= TextBox_TextChanged;
+            textBox.Text = previousData.mTextString;
+            textBox.SelectionStart = currentData.sSelectionStart;
+            textBox.ScrollToCaret();
+            textBox.TextChanged += TextBox_TextChanged;
          }
-         if (sUndoList.Count == 1) {
-            if (!string.IsNullOrEmpty(sImportedText) && (textBox.Text == string.Empty))
+         else {// sUndoList.RemoveAt(sUndoList.Count - 1); Has emptied the list
+            if (!string.IsNullOrEmpty(sImportedText)) {//Must've gotten an import
+               textBox.TextChanged -= TextBox_TextChanged;
+               sUndoList.Add(new UnReDoData(0, string.Empty));//Seed
+               sUndoList.Add(new UnReDoData(0, sImportedText));
                textBox.Text = sImportedText;
+               textBox.SelectionStart = 0;
+               textBox.ScrollToCaret();
+               textBox.TextChanged += TextBox_TextChanged;
+            }
+            else {//No import – just seed
+               textBox.TextChanged -= TextBox_TextChanged;
+               sUndoList.Add(new UnReDoData(0, string.Empty));//Seed
+               textBox.Text = string.Empty;
+               textBox.SelectionStart = 0;
+               textBox.TextChanged += TextBox_TextChanged;
+            }
          }
       }
 
@@ -539,8 +538,11 @@ namespace CurlyPad {
             return;
          sDoing = true;
          UnReDoData unReDoData = sRedoList.Last();
+         textBox.TextChanged -= TextBox_TextChanged;
          textBox.Text = unReDoData.mTextString;
          textBox.SelectionStart = unReDoData.sSelectionStart;
+         textBox.ScrollToCaret();
+         textBox.TextChanged += TextBox_TextChanged;
          sRedoList.RemoveAt(sRedoList.Count - 1);
          sUndoList.Add(new UnReDoData(textBox.SelectionStart, textBox.Text));
       }
@@ -1091,11 +1093,7 @@ namespace CurlyPad {
 
       private void ClearFileHistoryButton_Click(object pSender, EventArgs pE) {
          try {
-            for (int i = 0; i < openRecentTSMI.DropDownItems.Count; i++) {
-               ToolStripMenuItem tsmi = (ToolStripMenuItem)openRecentTSMI.DropDownItems[0];
-               tsmi?.Dispose();
-            }
-            openRecentTSMI.DropDownItems.Clear();
+            openRecentTSMI.DropDownItems.Clear(); //efm5 Clear() calls Dispose on each item internally
             if (File.Exists(sRecentFileHistoryPath))
                File.Delete(sRecentFileHistoryPath);
             done.Show();

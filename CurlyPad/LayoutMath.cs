@@ -709,10 +709,10 @@ scaling: 128; height: 138
             if (r < 0)
                r = 0;
             g = (int)Math.Floor(pColor.G * 0.9f);
-            if (g > 0)
+            if (g < 0)
                g = 0;
             b = (int)Math.Floor(pColor.B * 0.9f);
-            if (b > 0)
+            if (b < 0)
                b = 0;
          }
          return Color.FromArgb(r, g, b);

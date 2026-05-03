@@ -526,13 +526,15 @@ namespace CurlyPad {
 
       private void GetInterfaceFontButton_Click(object pSender, EventArgs pE) {
          fontDialog.ShowColor = true;
-         fontDialog.Font = textBox.Font;
-         fontDialog.Color = textBox.ForeColor;
+         fontDialog.Font = menuStrip.Font;
+         fontDialog.Color = menuStrip.ForeColor;
          if (fontDialog.ShowDialog() != DialogResult.Cancel) {
-            sTemporaryTheme.mTextBoxFont = CreateNewFont(fontDialog.Font);
-            sTemporaryTheme.mTextBoxFontColor = fontDialog.Color;
-            interfaceFontLabel.Text = string.Format("Font: {0}; size: {1}; style: {2}", sTemporaryTheme.mInterfaceFont.Name,
-             (int)sTemporaryTheme.mInterfaceFont.SizeInPoints, sTemporaryTheme.mInterfaceFont.Style);
+            sTemporaryTheme.mInterfaceFont = CreateNewFont(fontDialog.Font);
+            sTemporaryTheme.mInterfaceFontColor = fontDialog.Color;
+            interfaceFontLabel.Text = string.Format("Font: {0}; size: {1}; style: {2}",
+               sTemporaryTheme.mInterfaceFont.Name,
+               (int)sTemporaryTheme.mInterfaceFont.SizeInPoints,
+               sTemporaryTheme.mInterfaceFont.Style);
          }
       }
 
