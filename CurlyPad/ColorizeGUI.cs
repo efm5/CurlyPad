@@ -258,16 +258,6 @@ namespace CurlyPad {
             tsmi.ForeColor = sCurrentTheme.mInterfaceFontColor;
             tsmi.BackColor = sCurrentTheme.mInterfaceBackgroundColor;
          }
-         foreach (ToolStripMenuItem tsmi in xFontPickersTSMI.DropDownItems.OfType<ToolStripMenuItem>()) {
-            tsmi.Font = CreateNewFont(sCurrentTheme.mInterfaceFont);
-            tsmi.ForeColor = sCurrentTheme.mInterfaceFontColor;
-            tsmi.BackColor = sCurrentTheme.mInterfaceBackgroundColor;
-         }
-         foreach (ToolStripMenuItem tsmi in xColorPickersTSMI.DropDownItems.OfType<ToolStripMenuItem>()) {
-            tsmi.Font = CreateNewFont(sCurrentTheme.mInterfaceFont);
-            tsmi.ForeColor = sCurrentTheme.mInterfaceFontColor;
-            tsmi.BackColor = sCurrentTheme.mInterfaceBackgroundColor;
-         }
          foreach (ToolStripStatusLabel tsmi in statusStrip.Items.OfType<ToolStripStatusLabel>()) {
             tsmi.Font = CreateNewFont(sCurrentTheme.mInterfaceFont);
             tsmi.ForeColor = sCurrentTheme.mInterfaceFontColor;

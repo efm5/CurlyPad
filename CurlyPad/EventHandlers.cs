@@ -202,17 +202,6 @@ namespace CurlyPad {
          wheelingVelocityPanel?.Dispose();
          statusStripBackgroundColorTSMI?.Dispose();
          dialogBackgroundColorTSMI?.Dispose();
-         xInterfaceFontTSMI?.Dispose();
-         xMonospacedTextBoxFontTSMI?.Dispose();
-         xTextFontTSMI?.Dispose();
-         xFontPickersTSMI?.Dispose();
-         xInterfaceFontColorTSMI?.Dispose();
-         xInterfaceBackgroundColorTSMI?.Dispose();
-         xTextFontColorTSMI?.Dispose();
-         xTextBackgroundColorTSMI?.Dispose();
-         xColorPickersTSMI?.Dispose();
-         xStatusStripBackgroundColorTSMI?.Dispose();
-         xDialogBackgroundColorTSMI?.Dispose();
          for (int i = 0; i < openRecentTSMI.DropDownItems.Count; i++)
             openRecentTSMI.DropDownItems[i]?.Dispose();
          openRecentTSMI?.Dispose();
@@ -260,7 +249,6 @@ namespace CurlyPad {
          createThemeTSMI?.Dispose();
          removeThemeTSMI?.Dispose();
          editThemeTSMI?.Dispose();
-         xStatusStripBackgroundColorTSMI?.Dispose();
          deleteTSMI?.Dispose();
          editTSMI?.Dispose();
          exitTSMI?.Dispose();
@@ -302,8 +290,6 @@ namespace CurlyPad {
          toolStripSeparator11?.Dispose();
          toolStripSeparator12?.Dispose();
          toolStripSeparator13?.Dispose();
-         toolStripSeparator14?.Dispose();
-         toolStripSeparator15?.Dispose();
          toolStripSeparator16?.Dispose();
          toolStripSeparator17?.Dispose();
          undoTSMI?.Dispose();
@@ -926,43 +912,6 @@ namespace CurlyPad {
             sCurrentTheme.mPanelBackgroundColor = colorDialog.Color;
             ColorizeGui();
          }
-      }
-
-      private void XInterfaceFontTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalFont(FontUsage.Interface);
-         ResizeTextBox();
-      }
-
-      private void XTextFontTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalFont(FontUsage.TextBox);
-      }
-
-      private void XMonospacedTextBoxFontTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalFont(FontUsage.TextBoxMono);
-      }
-
-      private void XTextFontColorTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalColor(ColorUsage.Text);
-      }
-
-      private void XInterfaceFontColorTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalColor(ColorUsage.InterfaceText);
-      }
-
-      private void XInterfaceBackgroundColorTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalColor(ColorUsage.InterfaceBackground);
-      }
-
-      private void XTextBackgroundColorTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalColor(ColorUsage.TextBackground);
-      }
-
-      private void XStatusBarBackgroundColorTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalColor(ColorUsage.StatusBarBackground);
-      }
-
-      private void XDialogBackgroundColorTSMI_Click(object pSender, EventArgs pE) {
-         GetExternalColor(ColorUsage.DialogBackground);
       }
 
       private void AllIfNothingTSMI_Click(object pSender, EventArgs pE) {

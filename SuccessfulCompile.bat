@@ -13,51 +13,39 @@ if exist "A:\" (
    CD %datestr%
    mkdir %dtStamp%
    CD %dtStamp%
-   rar a -r -dh "CurlyPad.rar" "D:\CurlyPad\"
+   rar a -r -dh "CurlyPad.rar" "E:\CurlyPad\"
 )
 
-if exist "D:\CurlyPad\Help" (
-   if exist "D:\styles.css" (
-      CD /D "D:\CurlyPad\Help"
-      xcopy /c /h /k /y "D:\styles.css"
+if exist "E:\CurlyPad\Help" (
+   if exist "E:\styles.css" (
+      CD /D "E:\CurlyPad\Help"
+      xcopy /c /h /k /y "E:\styles.css"
    )
-   if exist "D:\CurlyPad\CurlyPad\bin\Debug\net10.0-windows7.0" (
-      CD /D "D:\CurlyPad\CurlyPad\bin\Debug\net10.0-windows7.0"
+   if exist "E:\CurlyPad\CurlyPad\bin\Debug\net7.0-windows7.0" (
+      CD /D "E:\CurlyPad\CurlyPad\bin\Debug\net7.0-windows7.0"
       mkdir "Help"
-      CD /D "D:\CurlyPad\CurlyPad\bin\Debug\net10.0-windows7.0\Help"
-      xcopy /c /h /k /y "D:\CurlyPad\Help\*.*"
+      CD /D "E:\CurlyPad\CurlyPad\bin\Debug\net7.0-windows7.0\Help"
+      xcopy /c /h /k /y "E:\CurlyPad\Help\*.*"
    )
-   if exist "D:\CurlyPad\CurlyPad\bin\Release\net10.0-windows7.0" (
-      CD /D "D:\CurlyPad\CurlyPad\bin\Release\net10.0-windows7.0"
+   if exist "E:\CurlyPad\CurlyPad\bin\Release\net7.0-windows7.0" (
+      CD /D "E:\CurlyPad\CurlyPad\bin\Release\net7.0-windows7.0"
       mkdir "Help"
-      CD /D "D:\CurlyPad\CurlyPad\bin\Release\net10.0-windows7.0\Help"
-      xcopy /c /h /k /y "D:\CurlyPad\Help\*.*"
+      CD /D "E:\CurlyPad\CurlyPad\bin\Release\net7.0-windows7.0\Help"
+      xcopy /c /h /k /y "E:\CurlyPad\Help\*.*"
    )
 )
-if exist "D:\CurlyPad\CurlyPad\bin\Debug\net10.0-windows7.0" (
-   CD /D "D:\CurlyPad\CurlyPad\bin\Debug\net10.0-windows7.0"
-   if exist "D:\aaaa speech productivity\7 Core\ExternalColorPicker\ExternalColorPicker\bin\Debug" (
-      xcopy /c /h /k /y "D:\aaaa speech productivity\7 Core\ExternalColorPicker\ExternalColorPicker\bin\Debug\*.*"
-   )
-   if exist "D:\aaaa speech productivity\7 Core\ExternalFontPicker\bin\Debug" (
-      xcopy /c /h /k /y "D:\aaaa speech productivity\7 Core\ExternalFontPicker\bin\Debug\*.*"
-   )
-   if exist "D:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Debug\net10.0-windows7.0" (
-      xcopy /c /h /k /y "D:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Debug\net10.0-windows7.0\*.*"
+if exist "E:\CurlyPad\CurlyPad\bin\Debug\net7.0-windows7.0" (
+   CD /D "E:\CurlyPad\CurlyPad\bin\Debug\net7.0-windows7.0"
+   if exist "E:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Debug\net7.0-windows7.0" (
+      xcopy /c /h /k /y "E:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Debug\net7.0-windows7.0\*.*"
    )
 )
-if exist "D:\CurlyPad\CurlyPad\bin\Release\net10.0-windows7.0" (
-   CD /D "D:\CurlyPad\CurlyPad\bin\Release\net10.0-windows7.0"
-   if exist "D:\aaaa speech productivity\7 Core\ExternalColorPicker\ExternalColorPicker\bin\Release" (
-      xcopy /c /h /k /y "D:\aaaa speech productivity\7 Core\ExternalColorPicker\ExternalColorPicker\bin\Release\*.*"
+if exist "E:\CurlyPad\CurlyPad\bin\Release\net7.0-windows7.0" (
+   CD /D "E:\CurlyPad\CurlyPad\bin\Release\net7.0-windows7.0"
+   if exist "E:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Release\net7.0-windows7.0" (
+      xcopy /c /h /k /y "E:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Release\net7.0-windows7.0\*.*"
    )
-   if exist "D:\aaaa speech productivity\7 Core\ExternalFontPicker\bin\Release" (
-      xcopy /c /h /k /y "D:\aaaa speech productivity\7 Core\ExternalFontPicker\bin\Release\*.*"
-   )
-   if exist "D:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Release\net10.0-windows7.0" (
-      xcopy /c /h /k /y "D:\CurlyPad\CurlyPadCleaner\CurlyPadCleaner\bin\Release\net10.0-windows7.0\*.*"
-   )
-   del "D:\CurlyPad\CurlyPad\bin\Release\net10.0-windows7.0\*.pdb"
+   del "E:\CurlyPad\CurlyPad\bin\Release\net7.0-windows7.0\*.pdb"
 )
 echo %datestr%
 echo %dtStamp%
