@@ -13,7 +13,7 @@ if exist "A:\" (
    CD %datestr%
    mkdir %dtStamp%
    CD %dtStamp%
-   rar a -r -dh "CurlyPad.rar" "E:\CurlyPad\"
+   xcopy /e /c /h /k /y /i "E:\CurlyPad\"
 )
 
 if exist "E:\CurlyPad\Help" (
