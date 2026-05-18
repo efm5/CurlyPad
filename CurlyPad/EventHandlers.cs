@@ -497,9 +497,9 @@ namespace CurlyPad {
          if (sUndoList.Count == 0)
             return;
          sDoing = true;
-         if (!string.IsNullOrEmpty(textBox.Text))
-            sRedoList.Add(new UnReDoData(textBox.SelectionStart, textBox.Text));
          UnReDoData currentData = sUndoList.Last();
+         if (!string.IsNullOrEmpty(textBox.Text))
+            sRedoList.Add(new UnReDoData(currentData.mSelectionStart, textBox.Text));
          sUndoList.RemoveAt(sUndoList.Count - 1);
          if (sUndoList.Count > 0) {
             UnReDoData previousData = sUndoList.Last();
